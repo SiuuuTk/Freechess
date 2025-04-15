@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://github.com/SiuuuTk/Checkmate-Tracker">
+  <a href="https://github.com/SiuuuTk/Checkmate-tracker-logo/tree/main">
     <img width="120" height="120" src="https://github.com/SiuuuTk/Checkmate-tracker-logo/blob/main/android-chrome-192x192.png" alt="Checkmate Tracker Logo">
   </a>
 
