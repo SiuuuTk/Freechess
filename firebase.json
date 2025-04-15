@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "freechess",
+    "site": "checkmate tracker",
     "public": "out",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "cleanUrls": true,

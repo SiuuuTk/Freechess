@@ -29,11 +29,11 @@ export default function Document() {
 
         {/* Balises OG (Facebook & Twitter) */}
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Freechess.web.app" />
-        <meta property="og:url" content="https://freechess.web.app/" />
+        <meta property="og:site_name" content="Checkmate Tracker.web.app" />
+        <meta property="og:url" content="https://checkmatetracker.web.app/" />
         <meta
           property="og:image"
-          content="https://freechess.web.app/android-chrome-512x512.png"
+          content="https://checkmatetracker.web.app/android-chrome-512x512.png"
         />
         <meta
           property="og:description"
