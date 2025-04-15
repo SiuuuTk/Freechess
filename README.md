@@ -1,26 +1,26 @@
 <div align="center">
-  <a href="https://github.com/GuillaumeSD/Freechess">
-    <img width="120" height="120" src="https://github.com/GuillaumeSD/Freechess/blob/main/public/android-chrome-192x192.png" alt="Logo">
+  <a href="https://github.com/SiuuuTk/Checkmate-Tracker">
+    <img width="120" height="120" src="https://github.com/SiuuuTk/Checkmate-tracker-logo/blob/main/android-chrome-192x192.png" alt="Checkmate Tracker Logo">
   </a>
 
-<h3 align="center">Freechess</h3>
+<h3 align="center">Checkmate Tracker</h3>
   <p align="center">
-    The Ultimate Chess Web App
+    Track, Analyze and Improve Your Chess – For Free
     <br />
-    <a href="https://freechess.web.app/" target="_blank" rel="noopener noreferrer"><strong>freechess.web.app</strong></a>
+   <a href="https://checkmatetracker.web.app/" target="_blank" rel="noopener noreferrer"><strong>checkmatetracker.web.app</strong></a>
     <br />
-    <a href="https://discord.com/invite/Yr99abAcUr" target="_blank" rel="noopener noreferrer">Discord Server</a>
-    ·
-    <a href="https://freechess.notion.site/4cf7823836724432b71aa8932ba7d5bb" target="_blank" rel="noopener noreferrer">Features Backlog</a>
+    
+    
+    
   </p>
 </div>
 <br />
 
-Freechess is an open-source chess web app to play, view and analyze your chess games for free on any device with Stockfish !
+Checkmate Tracker is a chess web app to play, view and analyze your chess games for free on any device with Stockfish !
 
 ## Mission
 
-It aims to offer all the features it can from the best chess apps, while being free and open-source. It is designed to be easy to use, fast, and reliable.
+It aims to offer all the features it can from the best chess apps, while being free. It is designed to be easy to use, fast, and reliable.
 
 ## Features
 
@@ -31,13 +31,13 @@ It aims to offer all the features it can from the best chess apps, while being f
 - Play against Stockfish at any elo
 - Store your games in your browser database
 
-<img src="https://github.com/GuillaumeSD/Freechess/blob/main/assets/showcase.png" />
+
 
 ## Stack
 
 Built with [Next.js](https://nextjs.org/docs), [React](https://react.dev/learn/describing-the-ui), [Material UI](https://mui.com/material-ui/getting-started/overview/), and [TypeScript](https://www.typescriptlang.org/docs/handbook/typescript-from-scratch.html).
 
-Deployed on [Firebase](https://firebase.google.com/docs/hosting), see it live [here](https://freechess.web.app).
+Deployed on [Firebase](https://firebase.google.com/docs/hosting), see it live [here](https://checkmatetracker.web.app).
 
 ## Running the app in dev mode
 
@@ -80,3 +80,7 @@ npm run deploy
 GNU General Public License v3.0.
 
 See [COPYING](COPYING) to see the full text.
+
+## Author
+
+Built and maintained by [@SiuuuTk](https://github.com/SiuuuTk).
