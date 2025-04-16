@@ -4,6 +4,9 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        {/* 🔍 Balise de vérification Google */}
+        <meta name="google-site-verification" content="Si2mjupcyKtrWvHw1NTgxzMJNbtCY-cJaucGHkwXtDA" />
+
         <link
           rel="apple-touch-icon"
           sizes="180x180"
