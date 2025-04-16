@@ -5,7 +5,10 @@ export default function Document() {
     <Html lang="en">
       <Head>
         {/* 🔍 Balise de vérification Google */}
-        <meta name="google-site-verification" content="Si2mjupcyKtrWvHw1NTgxzMJNbtCY-cJaucGHkwXtDA" />
+        <meta
+          name="google-site-verification"
+          content="Si2mjupcyKtrWvHw1NTgxzMJNbtCY-cJaucGHkwXtDA"
+        />
 
         <link
           rel="apple-touch-icon"
