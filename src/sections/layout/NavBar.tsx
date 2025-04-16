@@ -60,12 +60,19 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
               Checkmate Tracker
             </Typography>
           </NavLink>
+
+          {/* Discord button temporarily disabled */}
+          {/*
           <IconButton
             color="inherit"
             onClick={() => window.open("https://discord.gg/Yr99abAcUr")}
           >
             <Icon icon="ri:discord-fill" />
           </IconButton>
+          */}
+
+          {/* GitHub button temporarily disabled */}
+          {/*
           <IconButton
             color="inherit"
             sx={{ ml: "min(0.6rem, 0.8vw)" }}
@@ -75,6 +82,8 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
           >
             <Icon icon="mdi:github" />
           </IconButton>
+          */}
+
           <IconButton
             sx={{ ml: "min(0.6rem, 0.8vw)" }}
             onClick={switchDarkMode}
