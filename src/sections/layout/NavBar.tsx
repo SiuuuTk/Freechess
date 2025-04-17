@@ -1,13 +1,11 @@
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-// import Typography from "@mui/material/Typography"; // temporairement désactivé
 import IconButton from "@mui/material/IconButton";
 import { useEffect, useState } from "react";
 import NavMenu from "./NavMenu";
 import { Icon } from "@iconify/react";
 import { useRouter } from "next/router";
-// import NavLink from "@/components/NavLink"; // temporairement désactivé
 import Image from "next/image";
 
 interface Props {
@@ -31,6 +29,7 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
         enableColorOnDark
       >
         <Toolbar>
+          {/* Menu icon (left) */}
           <IconButton
             size="large"
             edge="start"
@@ -42,52 +41,21 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
             <Icon icon="mdi:menu" />
           </IconButton>
 
-          <Image
-            src="/android-chrome-512x512.png"
-            alt="Checkmate Tracker logo"
-            width={228}
-            height={39}
-          />
+          {/* Logo */}
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            <Image
+              src="/android-chrome-512x512.png"
+              alt="Checkmate Tracker logo"
+              width={228}
+              height={39}
+              priority
+            />
+          </Box>
 
-          {/* 
-          <NavLink href="/">
-            <Typography
-              variant="h6"
-              component="div"
-              sx={{
-                flexGrow: 1,
-                ml: 1,
-                fontSize: { xs: "1rem", sm: "1.25rem" },
-              }}
-            >
-              Checkmate Tracker
-            </Typography>
-          </NavLink> 
-          */}
+          {/* Spacer to push next elements to right */}
+          <Box sx={{ flexGrow: 1 }} />
 
-          {/* Discord button temporairement désactivé */}
-          {/*
-          <IconButton
-            color="inherit"
-            onClick={() => window.open("https://discord.gg/Yr99abAcUr")}
-          >
-            <Icon icon="ri:discord-fill" />
-          </IconButton>
-          */}
-
-          {/* GitHub button temporairement désactivé */}
-          {/*
-          <IconButton
-            color="inherit"
-            sx={{ ml: "min(0.6rem, 0.8vw)" }}
-            onClick={() =>
-              window.open("https://github.com/SiuuuTk/Checkmate-Tracker")
-            }
-          >
-            <Icon icon="mdi:github" />
-          </IconButton>
-          */}
-
+          {/* Dark mode toggle */}
           <IconButton
             sx={{ ml: "min(0.6rem, 0.8vw)" }}
             onClick={switchDarkMode}
