@@ -1,13 +1,13 @@
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
+// import Typography from "@mui/material/Typography"; // temporairement désactivé
 import IconButton from "@mui/material/IconButton";
 import { useEffect, useState } from "react";
 import NavMenu from "./NavMenu";
 import { Icon } from "@iconify/react";
 import { useRouter } from "next/router";
-import NavLink from "@/components/NavLink";
+// import NavLink from "@/components/NavLink"; // temporairement désactivé
 import Image from "next/image";
 
 interface Props {
@@ -49,8 +49,7 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
             height={48}
           />
 
-          {/* Texte Checkmate Tracker désactivé temporairement */}
-          {/*
+          {/* 
           <NavLink href="/">
             <Typography
               variant="h6"
@@ -63,7 +62,7 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
             >
               Checkmate Tracker
             </Typography>
-          </NavLink>
+          </NavLink> 
           */}
 
           {/* Discord button temporairement désactivé */}
