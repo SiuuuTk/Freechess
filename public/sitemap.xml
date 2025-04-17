@@ -7,21 +7,21 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://checkmate-tracker.web.app/</loc>
+    <loc>https://checkmatetracker.com/</loc>
     <lastmod>2025-04-16T20:23:00+00:00</lastmod>
     <priority>1.0</priority>
   </url>
 
   <!-- Game Page -->
   <url>
-    <loc>https://checkmate-tracker.web.app/play</loc>
+    <loc>https://checkmatetracker.com/play</loc>
     <lastmod>2025-04-16T20:23:00+00:00</lastmod>
     <priority>0.9</priority>
   </url>
 
   <!-- Database Page -->
   <url>
-    <loc>https://checkmate-tracker.web.app/database</loc>
+    <loc>https://checkmatetracker.com/database</loc>
     <lastmod>2025-04-16T20:23:00+00:00</lastmod>
     <priority>0.9</priority>
   </url>
