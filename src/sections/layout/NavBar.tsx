@@ -41,12 +41,16 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
           >
             <Icon icon="mdi:menu" />
           </IconButton>
+
           <Image
-            src="/favicon-32x32.png"
+            src="/android-chrome-512x512.png"
             alt="Checkmate Tracker logo"
-            width={32}
-            height={32}
+            width={160}
+            height={48}
           />
+
+          {/* Texte Checkmate Tracker désactivé temporairement */}
+          {/*
           <NavLink href="/">
             <Typography
               variant="h6"
@@ -60,8 +64,9 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
               Checkmate Tracker
             </Typography>
           </NavLink>
+          */}
 
-          {/* Discord button temporarily disabled */}
+          {/* Discord button temporairement désactivé */}
           {/*
           <IconButton
             color="inherit"
@@ -71,7 +76,7 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
           </IconButton>
           */}
 
-          {/* GitHub button temporarily disabled */}
+          {/* GitHub button temporairement désactivé */}
           {/*
           <IconButton
             color="inherit"
