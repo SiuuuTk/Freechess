@@ -46,7 +46,7 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
             src="/android-chrome-512x512.png"
             alt="Checkmate Tracker logo"
             width={160}
-            height={48}
+            height={107}
           />
 
           {/* 
