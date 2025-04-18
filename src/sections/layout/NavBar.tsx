@@ -75,14 +75,17 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
             </Box>
           </Box>
 
+          {/* Spacer */}
+          <Box sx={{ flexGrow: 1 }} />
+
           {/* About + Contact Links */}
-          <Box sx={{ ml: 3, display: "flex", alignItems: "center", gap: 3 }}>
+          <Box sx={{ display: "flex", alignItems: "center", gap: 3, mr: 2 }}>
             <Link href="/about" passHref>
               <Typography
                 variant="body1"
                 sx={{
                   cursor: "pointer",
-                  color: "inherit",
+                  color: "#fff",
                   textDecoration: "none",
                   "&:hover": {
                     textDecoration: "underline",
@@ -97,7 +100,7 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
                 variant="body1"
                 sx={{
                   cursor: "pointer",
-                  color: "inherit",
+                  color: "#fff",
                   textDecoration: "none",
                   "&:hover": {
                     textDecoration: "underline",
@@ -108,9 +111,6 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
               </Typography>
             </Link>
           </Box>
-
-          {/* Spacer */}
-          <Box sx={{ flexGrow: 1 }} />
 
           {/* Dark mode toggle */}
           <IconButton
