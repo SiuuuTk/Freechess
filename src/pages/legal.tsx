@@ -6,7 +6,10 @@ export default function LegalNotice() {
     <>
       <Head>
         <title>Legal Notice - Checkmate Tracker</title>
-        <meta name="description" content="Legal Notice and Terms of Use for Checkmate Tracker." />
+        <meta
+          name="description"
+          content="Legal Notice and Terms of Use for Checkmate Tracker."
+        />
       </Head>
       <Container maxWidth="md" sx={{ py: 8 }}>
         <Typography variant="h4" gutterBottom>
@@ -20,37 +23,55 @@ export default function LegalNotice() {
             <br />
             <strong>Owner:</strong> Checkmate Tracker Team
             <br />
-            <strong>Contact:</strong> checkmatetracker.contact@gmail.com
+            <strong>Contact:</strong>{" "}
+            <a
+              href="mailto:checkmatetracker.contact@gmail.com"
+              style={{ color: "inherit", textDecoration: "underline" }}
+            >
+              checkmatetracker.contact@gmail.com
+            </a>
           </Typography>
 
           <Typography variant="h6" mt={4}>
             2. Hosting Provider
           </Typography>
           <Typography paragraph>
-            <strong>Host:</strong> Hostinger International Ltd.
+            <strong>Host:</strong> Google LLC (Firebase)
             <br />
-            <strong>Website:</strong> https://www.hostinger.com
+            <strong>Website:</strong>{" "}
+            <a
+              href="https://firebase.google.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "inherit", textDecoration: "underline" }}
+            >
+              https://firebase.google.com
+            </a>
           </Typography>
 
           <Typography variant="h6" mt={4}>
             3. Intellectual Property
           </Typography>
           <Typography paragraph>
-            All content on Checkmate Tracker (text, images, logos, etc.) is the property of the site owner unless otherwise stated. Unauthorized use or reproduction is prohibited.
+            All content on Checkmate Tracker (text, images, logos, etc.) is the
+            property of the site owner unless otherwise stated. Unauthorized use
+            or reproduction is prohibited.
           </Typography>
 
           <Typography variant="h6" mt={4}>
             4. Liability
           </Typography>
           <Typography paragraph>
-            The site owner shall not be held responsible for any direct or indirect damages resulting from the use of this site.
+            The site owner shall not be held responsible for any direct or
+            indirect damages resulting from the use of this site.
           </Typography>
 
           <Typography variant="h6" mt={4}>
             5. Governing Law
           </Typography>
           <Typography paragraph>
-            These terms are governed by applicable laws. Any disputes will be subject to the jurisdiction of the relevant courts.
+            These terms are governed by applicable laws. Any disputes will be
+            subject to the jurisdiction of the relevant courts.
           </Typography>
         </Box>
       </Container>
