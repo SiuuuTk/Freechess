@@ -86,10 +86,15 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
                 sx={{
                   cursor: "pointer",
                   color: "#fff",
-                  textDecoration: "none",
+                  textDecoration: "underline",
+                  textDecorationColor: "#fff",
                   "&:hover": {
                     textDecoration: "underline",
-                    textDecorationColor: "#fff", // 👈 underline blanc
+                    textDecorationColor: "#fff",
+                  },
+                  "&:visited": {
+                    color: "#fff",
+                    textDecorationColor: "#fff",
                   },
                 }}
               >
@@ -102,10 +107,15 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
                 sx={{
                   cursor: "pointer",
                   color: "#fff",
-                  textDecoration: "none",
+                  textDecoration: "underline",
+                  textDecorationColor: "#fff",
                   "&:hover": {
                     textDecoration: "underline",
-                    textDecorationColor: "#fff", // 👈 underline blanc
+                    textDecorationColor: "#fff",
+                  },
+                  "&:visited": {
+                    color: "#fff",
+                    textDecorationColor: "#fff",
                   },
                 }}
               >
