@@ -16,7 +16,7 @@ export default function PrivacyPolicy() {
         Privacy Policy
       </Typography>
 
-      <Typography paragraph>
+      <Typography component="p">
         At Checkmate Tracker, we value your privacy. This policy outlines how we
         collect, use, and protect your data.
       </Typography>
@@ -24,7 +24,7 @@ export default function PrivacyPolicy() {
       <Typography variant="h6" gutterBottom>
         Personal Data Collection
       </Typography>
-      <Typography paragraph>
+      <Typography component="p">
         We do not collect personally identifiable information unless you
         explicitly contact us. Non-personal data such as device type, browser
         version, and approximate location may be collected to improve site
@@ -34,7 +34,7 @@ export default function PrivacyPolicy() {
       <Typography variant="h6" gutterBottom>
         Cookies and Tracking Technologies
       </Typography>
-      <Typography paragraph>
+      <Typography component="p">
         We use cookies to enhance your experience and provide relevant content.
         These cookies may track usage statistics or display personalized ads.
         You can disable cookies in your browser settings at any time.
@@ -43,7 +43,7 @@ export default function PrivacyPolicy() {
       <Typography variant="h6" gutterBottom>
         Google AdSense
       </Typography>
-      <Typography paragraph>
+      <Typography component="p">
         This website uses Google AdSense, a third-party advertising service.
         Google may use cookies and web beacons to display targeted ads based on
         your visit. Learn more about how Google uses your data:{" "}
@@ -61,7 +61,7 @@ export default function PrivacyPolicy() {
       <Typography variant="h6" gutterBottom>
         Data Storage
       </Typography>
-      <Typography paragraph>
+      <Typography component="p">
         Your chess games and preferences are stored locally in your browser
         (IndexedDB). We do not host or store any personal data on external
         servers.
@@ -70,7 +70,7 @@ export default function PrivacyPolicy() {
       <Typography variant="h6" gutterBottom>
         Your Rights
       </Typography>
-      <Typography paragraph>
+      <Typography component="p">
         You have the right to access, modify, or delete your personal data. You
         may also object to its processing. To exercise your rights, please
         contact us using the email below.
@@ -79,7 +79,7 @@ export default function PrivacyPolicy() {
       <Typography variant="h6" gutterBottom>
         Contact
       </Typography>
-      <Typography paragraph>
+      <Typography component="p">
         For questions or requests related to this Privacy Policy, contact us at:{" "}
         <br />
         <strong>checkmatetracker.contact@gmail.com</strong>

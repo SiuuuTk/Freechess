@@ -18,7 +18,7 @@ export default function LegalNotice() {
 
         <Box mt={4}>
           <Typography variant="h6">1. Site Identification</Typography>
-          <Typography paragraph>
+          <Typography component="p">
             <strong>Website:</strong> Checkmate Tracker
             (https://checkmatetracker.com)
             <br />
@@ -36,7 +36,7 @@ export default function LegalNotice() {
           <Typography variant="h6" mt={4}>
             2. Hosting Provider
           </Typography>
-          <Typography paragraph>
+          <Typography component="p">
             <strong>Host:</strong> Google LLC (Firebase)
             <br />
             <strong>Website:</strong>{" "}
@@ -53,7 +53,7 @@ export default function LegalNotice() {
           <Typography variant="h6" mt={4}>
             3. Intellectual Property
           </Typography>
-          <Typography paragraph>
+          <Typography component="p">
             All content on Checkmate Tracker (text, images, logos, etc.) is the
             property of the site owner unless otherwise stated. Unauthorized use
             or reproduction is prohibited.
@@ -62,7 +62,7 @@ export default function LegalNotice() {
           <Typography variant="h6" mt={4}>
             4. Liability
           </Typography>
-          <Typography paragraph>
+          <Typography component="p">
             The site owner shall not be held responsible for any direct or
             indirect damages resulting from the use of this site.
           </Typography>
@@ -70,7 +70,7 @@ export default function LegalNotice() {
           <Typography variant="h6" mt={4}>
             5. Governing Law
           </Typography>
-          <Typography paragraph>
+          <Typography component="p">
             These terms are governed by applicable laws. Any disputes will be
             subject to the jurisdiction of the relevant courts.
           </Typography>

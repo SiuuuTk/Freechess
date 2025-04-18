@@ -18,13 +18,13 @@ export default function ContactPage() {
           Contact Us
         </Typography>
 
-        <Typography paragraph>
+        <Typography component="p">
           We'd love to hear from you! Whether you have feedback, suggestions, or
           encounter any issues while using Checkmate Tracker, feel free to reach
           out.
         </Typography>
 
-        <Typography paragraph>Email us at:</Typography>
+        <Typography component="p">Email us at:</Typography>
 
         <MuiLink
           href="mailto:checkmatetracker.contact@gmail.com"
@@ -36,7 +36,7 @@ export default function ContactPage() {
           checkmatetracker.contact@gmail.com
         </MuiLink>
 
-        <Typography paragraph sx={{ mt: 2 }}>
+        <Typography component="p" sx={{ mt: 2 }}>
           We usually respond within 24-48 hours. Thank you for using Checkmate
           Tracker!
         </Typography>
