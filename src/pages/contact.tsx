@@ -1,34 +1,44 @@
+// src/pages/contact.tsx
+import { Box, Typography, Link as MuiLink, useTheme } from "@mui/material";
 import Head from "next/head";
 
 export default function ContactPage() {
+  const theme = useTheme();
+  const isDark = theme.palette.mode === "dark";
+
   return (
     <>
       <Head>
         <title>Contact | Checkmate Tracker</title>
-        <meta
-          name="description"
-          content="Get in touch with the Checkmate Tracker team. We value your feedback and questions."
-        />
+        <meta name="description" content="Contact Checkmate Tracker support" />
       </Head>
-      <main style={{ padding: "2rem", maxWidth: "800px", margin: "0 auto" }}>
-        <h1>Contact Us</h1>
-        <p>
-          We'd love to hear from you! Whether you have feedback, suggestions,
-          or encounter any issues while using Checkmate Tracker, feel free to
-          reach out.
-        </p>
 
-        <p>Email us at:</p>
-        <p>
-          <a href="mailto:checkmatetracker.contact@gmail.com">
-            checkmatetracker.contact@gmail.com
-          </a>
-        </p>
+      <Box sx={{ p: { xs: 2, sm: 4 }, maxWidth: 900, mx: "auto" }}>
+        <Typography variant="h4" gutterBottom>
+          Contact Us
+        </Typography>
 
-        <p>
+        <Typography paragraph>
+          We'd love to hear from you! Whether you have feedback, suggestions, or encounter any issues while
+          using Checkmate Tracker, feel free to reach out.
+        </Typography>
+
+        <Typography paragraph>Email us at:</Typography>
+
+        <MuiLink
+          href="mailto:checkmatetracker.contact@gmail.com"
+          underline="hover"
+          sx={{
+            color: isDark ? "#80bfff" : "primary.main", // 💡 bleu clair en mode sombre
+          }}
+        >
+          checkmatetracker.contact@gmail.com
+        </MuiLink>
+
+        <Typography paragraph sx={{ mt: 2 }}>
           We usually respond within 24-48 hours. Thank you for using Checkmate Tracker!
-        </p>
-      </main>
+        </Typography>
+      </Box>
     </>
   );
 }
