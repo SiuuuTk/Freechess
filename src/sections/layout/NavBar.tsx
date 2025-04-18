@@ -1,3 +1,4 @@
+import Link from "next/link";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -41,15 +42,19 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
             <Icon icon="mdi:menu" />
           </IconButton>
 
-          {/* Logo */}
+          {/* Logo avec redirection vers / */}
           <Box sx={{ display: "flex", alignItems: "center" }}>
-            <Image
-              src="/android-chrome-512x512.png"
-              alt="Checkmate Tracker logo"
-              width={228}
-              height={39}
-              priority
-            />
+            <Link href="/" passHref>
+              <Box sx={{ cursor: "pointer", display: "flex" }}>
+                <Image
+                  src="/android-chrome-512x512.png"
+                  alt="Checkmate Tracker logo"
+                  width={228}
+                  height={39}
+                  priority
+                />
+              </Box>
+            </Link>
           </Box>
 
           {/* Spacer to push next elements to right */}
