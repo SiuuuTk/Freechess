@@ -1,7 +1,7 @@
 // pages/privacy-policy.tsx (ou app/privacy-policy/page.tsx si tu es en app dir)
 
 import { PageTitle } from "@/components/pageTitle";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Link as MuiLink } from "@mui/material";
 
 export default function PrivacyPolicy() {
   return (
@@ -35,9 +35,15 @@ export default function PrivacyPolicy() {
       </Typography>
       <Typography paragraph>
         This website uses Google AdSense, a third-party advertising service. Google may use cookies and web beacons to display targeted ads based on your visit. Learn more about how Google uses your data:{" "}
-        <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">
+        <MuiLink
+          href="https://policies.google.com/technologies/ads"
+          target="_blank"
+          rel="noopener noreferrer"
+          underline="hover"
+          sx={{ color: "#64b5f6" }} // 💙 Bleu clair lisible partout
+        >
           https://policies.google.com/technologies/ads
-        </a>
+        </MuiLink>
       </Typography>
 
       <Typography variant="h6" gutterBottom>
