@@ -34,6 +34,7 @@ export default function NavMenu({ open, onClose }: Props) {
           height: "100%",
           display: "flex",
           flexDirection: "column",
+          justifyContent: "space-between",
         }}
       >
         {/* Main navigation links */}
@@ -52,11 +53,15 @@ export default function NavMenu({ open, onClose }: Props) {
           ))}
         </List>
 
-        {/* Spacer to push legal links to bottom */}
-        <Box sx={{ flexGrow: 1 }} />
-
-        {/* Legal links at the bottom */}
-        <Box sx={{ px: 2, pb: 2 }}>
+        {/* Footer links side by side */}
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            gap: 2,
+            pb: 2,
+          }}
+        >
           <NavLink href="/legal">
             <Typography
               variant="body2"
@@ -78,8 +83,6 @@ export default function NavMenu({ open, onClose }: Props) {
               sx={{
                 color: "#fff",
                 textDecoration: "underline",
-                mt: 1,
-                display: "block",
                 "&:hover": {
                   textDecoration: "underline",
                 },
