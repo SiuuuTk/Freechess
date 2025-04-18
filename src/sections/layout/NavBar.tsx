@@ -49,10 +49,18 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
             <Icon icon="mdi:menu" />
           </IconButton>
 
-          {/* Logo cliquable */}
+          {/* Logo cliquable avec hover effect */}
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <Box
-              sx={{ cursor: "pointer", display: "flex" }}
+              sx={{
+                cursor: "pointer",
+                display: "flex",
+                transition: "transform 0.2s ease, opacity 0.2s ease",
+                "&:hover": {
+                  transform: "scale(1.05)",
+                  opacity: 0.9,
+                },
+              }}
               onClick={handleLogoClick}
             >
               <Image
