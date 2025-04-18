@@ -37,27 +37,35 @@ export default function Document() {
           href="/favicon-16x16.png"
         />
 
-        {/* SEO Description */}
+        {/* 🌍 SEO Title & Description */}
+        <title>Checkmate Tracker – Analyze & Improve Your Chess</title>
         <meta
           name="description"
-          content="Analyze your chess games for free on any device with Stockfish!"
+          content="Analyze your chess games, play vs Stockfish, and track your improvement – all for free on any device!"
         />
 
-        {/* OG Tags */}
+        {/* 🟢 Open Graph Meta Tags (Facebook, LinkedIn, etc.) */}
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Checkmate Tracker" />
+        <meta property="og:title" content="Checkmate Tracker – Analyze & Improve Your Chess" />
+        <meta
+          property="og:description"
+          content="Analyze your chess games, play vs Stockfish, and track your improvement – all for free on any device!"
+        />
         <meta property="og:url" content="https://www.checkmatetracker.com/" />
         <meta
           property="og:image"
           content="https://www.checkmatetracker.com/android-chrome-512x512.png"
         />
-        <meta
-          property="og:description"
-          content="Analyze your chess games for free on any device with Stockfish!"
-        />
 
-        {/* Twitter Card */}
+        {/* 🐦 Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Checkmate Tracker – Analyze & Improve Your Chess" />
+        <meta name="twitter:description" content="Play vs Stockfish, save and analyze your chess games. All in your browser." />
+        <meta
+          name="twitter:image"
+          content="https://www.checkmatetracker.com/android-chrome-512x512.png"
+        />
       </Head>
       <body>
         <Main />
