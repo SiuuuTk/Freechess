@@ -37,31 +37,39 @@ export default function Document() {
           href="/favicon-16x16.png"
         />
 
-        {/* 🌍 SEO Title & Description */}
-        <title>Checkmate Tracker – Analyze & Improve Your Chess</title>
+        {/* SEO Description */}
         <meta
           name="description"
-          content="Analyze your chess games, play vs Stockfish, and track your improvement – all for free on any device!"
+          content="Analyze your chess games for free on any device with Stockfish!"
         />
 
-        {/* 🟢 Open Graph Meta Tags (Facebook, LinkedIn, etc.) */}
+        {/* OG Tags */}
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Checkmate Tracker" />
-        <meta property="og:title" content="Checkmate Tracker – Analyze & Improve Your Chess" />
-        <meta
-          property="og:description"
-          content="Analyze your chess games, play vs Stockfish, and track your improvement – all for free on any device!"
-        />
         <meta property="og:url" content="https://www.checkmatetracker.com/" />
         <meta
           property="og:image"
           content="https://www.checkmatetracker.com/android-chrome-512x512.png"
         />
+        <meta
+          property="og:description"
+          content="Analyze your chess games for free on any device with Stockfish!"
+        />
+        <meta
+          property="og:title"
+          content="Checkmate Tracker – Analyze & Improve Your Chess"
+        />
 
-        {/* 🐦 Twitter Card Meta Tags */}
+        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Checkmate Tracker – Analyze & Improve Your Chess" />
-        <meta name="twitter:description" content="Play vs Stockfish, save and analyze your chess games. All in your browser." />
+        <meta
+          name="twitter:title"
+          content="Checkmate Tracker – Analyze & Improve Your Chess"
+        />
+        <meta
+          name="twitter:description"
+          content="Play vs Stockfish, save and analyze your chess games. All in your browser."
+        />
         <meta
           name="twitter:image"
           content="https://www.checkmatetracker.com/android-chrome-512x512.png"
