@@ -1,9 +1,14 @@
-// pages/privacy-policy.tsx (ou app/privacy-policy/page.tsx si tu es en app dir)
+// pages/privacy-policy.tsx
 
 import { PageTitle } from "@/components/pageTitle";
-import { Box, Typography, Link as MuiLink } from "@mui/material";
+import { Box, Typography, Link as MuiLink, useTheme } from "@mui/material";
 
 export default function PrivacyPolicy() {
+  const theme = useTheme();
+
+  const linkColor =
+    theme.palette.mode === "dark" ? "#64B5F6" : "#4CAF50"; // bleu clair ou vert selon le mode
+
   return (
     <Box sx={{ p: { xs: 2, sm: 4 }, maxWidth: 900, mx: "auto" }}>
       <PageTitle title="Privacy Policy - Checkmate Tracker" />
@@ -40,7 +45,7 @@ export default function PrivacyPolicy() {
           target="_blank"
           rel="noopener noreferrer"
           underline="hover"
-          sx={{ color: "#64b5f6" }} // 💙 Bleu clair lisible partout
+          sx={{ color: linkColor }}
         >
           https://policies.google.com/technologies/ads
         </MuiLink>
