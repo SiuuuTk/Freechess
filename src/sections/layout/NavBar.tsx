@@ -25,9 +25,9 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
 
   const handleLogoClick = () => {
     if (router.pathname === "/") {
-      router.reload(); // 🔁 Recharge si déjà sur la home
+      router.reload();
     } else {
-      router.push("/"); // ⏩ Sinon, redirige vers la home
+      router.push("/");
     }
   };
 
@@ -89,6 +89,7 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
                   textDecoration: "none",
                   "&:hover": {
                     textDecoration: "underline",
+                    textDecorationColor: "#fff", // 👈 underline blanc
                   },
                 }}
               >
@@ -104,6 +105,7 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
                   textDecoration: "none",
                   "&:hover": {
                     textDecoration: "underline",
+                    textDecorationColor: "#fff", // 👈 underline blanc
                   },
                 }}
               >
