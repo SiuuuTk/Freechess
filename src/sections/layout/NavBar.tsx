@@ -1,4 +1,3 @@
-import Link from "next/link";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -22,6 +21,14 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
     setDrawerOpen(false);
   }, [router.pathname]);
 
+  const handleLogoClick = () => {
+    if (router.pathname === "/") {
+      router.reload(); // 🔁 Recharge si déjà sur la home
+    } else {
+      router.push("/"); // ⏩ Sinon, redirige vers la home
+    }
+  };
+
   return (
     <Box sx={{ flexGrow: 1, display: "flex" }}>
       <AppBar
@@ -42,22 +49,23 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
             <Icon icon="mdi:menu" />
           </IconButton>
 
-          {/* Logo avec redirection vers / */}
+          {/* Logo cliquable */}
           <Box sx={{ display: "flex", alignItems: "center" }}>
-            <Link href="/" passHref>
-              <Box sx={{ cursor: "pointer", display: "flex" }}>
-                <Image
-                  src="/android-chrome-512x512.png"
-                  alt="Checkmate Tracker logo"
-                  width={228}
-                  height={39}
-                  priority
-                />
-              </Box>
-            </Link>
+            <Box
+              sx={{ cursor: "pointer", display: "flex" }}
+              onClick={handleLogoClick}
+            >
+              <Image
+                src="/android-chrome-512x512.png"
+                alt="Checkmate Tracker logo"
+                width={228}
+                height={39}
+                priority
+              />
+            </Box>
           </Box>
 
-          {/* Spacer to push next elements to right */}
+          {/* Spacer */}
           <Box sx={{ flexGrow: 1 }} />
 
           {/* Dark mode toggle */}
