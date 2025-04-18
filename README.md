@@ -31,8 +31,6 @@ It aims to offer all the features it can from the best chess apps, while being f
 - Play against Stockfish at any elo
 - Store your games in your browser database
 
-
-
 ## Stack
 
 Built with [Next.js](https://nextjs.org/docs), [React](https://react.dev/learn/describing-the-ui), [Material UI](https://mui.com/material-ui/getting-started/overview/), and [TypeScript](https://www.typescriptlang.org/docs/handbook/typescript-from-scratch.html).

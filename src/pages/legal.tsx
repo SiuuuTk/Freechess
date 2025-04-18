@@ -19,7 +19,8 @@ export default function LegalNotice() {
         <Box mt={4}>
           <Typography variant="h6">1. Site Identification</Typography>
           <Typography paragraph>
-            <strong>Website:</strong> Checkmate Tracker (https://checkmatetracker.com)
+            <strong>Website:</strong> Checkmate Tracker
+            (https://checkmatetracker.com)
             <br />
             <strong>Owner:</strong> Checkmate Tracker Team
             <br />
