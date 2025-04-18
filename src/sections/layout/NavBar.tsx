@@ -1,3 +1,4 @@
+import Link from "next/link";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -7,6 +8,7 @@ import NavMenu from "./NavMenu";
 import { Icon } from "@iconify/react";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import Typography from "@mui/material/Typography";
 
 interface Props {
   darkMode: boolean;
@@ -71,6 +73,40 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
                 priority
               />
             </Box>
+          </Box>
+
+          {/* About + Contact Links */}
+          <Box sx={{ ml: 3, display: "flex", alignItems: "center", gap: 3 }}>
+            <Link href="/about" passHref>
+              <Typography
+                variant="body1"
+                sx={{
+                  cursor: "pointer",
+                  color: "inherit",
+                  textDecoration: "none",
+                  "&:hover": {
+                    textDecoration: "underline",
+                  },
+                }}
+              >
+                About
+              </Typography>
+            </Link>
+            <Link href="/contact" passHref>
+              <Typography
+                variant="body1"
+                sx={{
+                  cursor: "pointer",
+                  color: "inherit",
+                  textDecoration: "none",
+                  "&:hover": {
+                    textDecoration: "underline",
+                  },
+                }}
+              >
+                Contact
+              </Typography>
+            </Link>
           </Box>
 
           {/* Spacer */}
