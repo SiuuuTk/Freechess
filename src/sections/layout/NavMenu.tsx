@@ -30,14 +30,13 @@ export default function NavMenu({ open, onClose }: Props) {
       <Box
         sx={{
           width: 250,
-          overflow: "hidden",
           height: "100%",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
         }}
       >
-        {/* Main navigation links */}
+        {/* Menu options */}
         <List>
           {MenuOptions.map(({ text, icon, href }) => (
             <ListItem key={text} disablePadding sx={{ margin: 0.7 }}>
@@ -53,13 +52,14 @@ export default function NavMenu({ open, onClose }: Props) {
           ))}
         </List>
 
-        {/* Footer links side by side */}
+        {/* Footer links centered and spaced */}
         <Box
           sx={{
             display: "flex",
             justifyContent: "center",
             gap: 2,
             pb: 2,
+            textAlign: "center",
           }}
         >
           <NavLink href="/legal">
