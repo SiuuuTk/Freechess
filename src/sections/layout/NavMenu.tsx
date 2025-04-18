@@ -36,7 +36,6 @@ export default function NavMenu({ open, onClose }: Props) {
           justifyContent: "space-between",
         }}
       >
-        {/* Menu options */}
         <List>
           {MenuOptions.map(({ text, icon, href }) => (
             <ListItem key={text} disablePadding sx={{ margin: 0.7 }}>
@@ -52,14 +51,13 @@ export default function NavMenu({ open, onClose }: Props) {
           ))}
         </List>
 
-        {/* Footer links centered and spaced */}
+        {/* Legal & Privacy links at the bottom */}
         <Box
           sx={{
             display: "flex",
-            justifyContent: "center",
-            gap: 2,
+            justifyContent: "space-between",
+            px: 3,
             pb: 2,
-            textAlign: "center",
           }}
         >
           <NavLink href="/legal">
