@@ -51,7 +51,7 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
             <Icon icon="mdi:menu" />
           </IconButton>
 
-          {/* Logo cliquable avec hover effect */}
+          {/* Logo cliquable */}
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <Box
               sx={{
@@ -78,8 +78,15 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
           {/* Spacer */}
           <Box sx={{ flexGrow: 1 }} />
 
-          {/* About + Contact Links */}
-          <Box sx={{ display: "flex", alignItems: "center", gap: 3, mr: 2 }}>
+          {/* About + Contact Links (hidden on mobile) */}
+          <Box
+            sx={{
+              display: { xs: "none", sm: "flex" },
+              alignItems: "center",
+              gap: 3,
+              mr: 2,
+            }}
+          >
             <Link href="/about" passHref>
               <Typography
                 variant="body1"
@@ -89,7 +96,6 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
                   textDecoration: "underline",
                   textDecorationColor: "#fff",
                   "&:hover": {
-                    textDecoration: "underline",
                     textDecorationColor: "#fff",
                   },
                   "&:visited": {
@@ -110,7 +116,6 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
                   textDecoration: "underline",
                   textDecorationColor: "#fff",
                   "&:hover": {
-                    textDecoration: "underline",
                     textDecorationColor: "#fff",
                   },
                   "&:visited": {
@@ -139,6 +144,8 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
           </IconButton>
         </Toolbar>
       </AppBar>
+
+      {/* Drawer (side menu) */}
       <NavMenu open={drawerOpen} onClose={() => setDrawerOpen(false)} />
     </Box>
   );

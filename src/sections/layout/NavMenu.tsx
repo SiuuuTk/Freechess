@@ -16,6 +16,8 @@ const MenuOptions = [
   { text: "Play", icon: "streamline:chess-pawn", href: "/play" },
   { text: "Analysis", icon: "streamline:magnifying-glass-solid", href: "/" },
   { text: "Database", icon: "streamline:database", href: "/database" },
+  { text: "About", icon: "mdi:information-outline", href: "/about" },
+  { text: "Contact", icon: "mdi:email-outline", href: "/contact" },
 ];
 
 interface Props {
@@ -36,12 +38,13 @@ export default function NavMenu({ open, onClose }: Props) {
           justifyContent: "space-between",
         }}
       >
+        {/* Main nav links */}
         <List>
           {MenuOptions.map(({ text, icon, href }) => (
             <ListItem key={text} disablePadding sx={{ margin: 0.7 }}>
               <NavLink href={href}>
                 <ListItemButton onClick={onClose}>
-                  <ListItemIcon style={{ paddingLeft: "0.5em" }}>
+                  <ListItemIcon sx={{ pl: 1 }}>
                     <Icon icon={icon} height="1.5em" />
                   </ListItemIcon>
                   <ListItemText primary={text} />
@@ -51,12 +54,12 @@ export default function NavMenu({ open, onClose }: Props) {
           ))}
         </List>
 
-        {/* Legal & Privacy links at the bottom */}
+        {/* Footer links */}
         <Box
           sx={{
             display: "flex",
             justifyContent: "space-between",
-            px: 3,
+            px: 2.5,
             pb: 2,
           }}
         >
@@ -66,23 +69,24 @@ export default function NavMenu({ open, onClose }: Props) {
               sx={{
                 color: "#fff",
                 textDecoration: "underline",
+                textDecorationColor: "#fff",
                 "&:hover": {
-                  textDecoration: "underline",
+                  textDecorationColor: "#fff",
                 },
               }}
             >
               Legal Notice
             </Typography>
           </NavLink>
-
           <NavLink href="/privacy-policy">
             <Typography
               variant="body2"
               sx={{
                 color: "#fff",
                 textDecoration: "underline",
+                textDecorationColor: "#fff",
                 "&:hover": {
-                  textDecoration: "underline",
+                  textDecorationColor: "#fff",
                 },
               }}
             >
