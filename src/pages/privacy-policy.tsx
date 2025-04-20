@@ -1,12 +1,11 @@
 // pages/privacy-policy.tsx
 
-import { PageTitle } from "@/components/pageTitle";
 import { Box, Typography, Link as MuiLink, useTheme } from "@mui/material";
+import { PageTitle } from "@/components/pageTitle";
 
 export default function PrivacyPolicy() {
   const theme = useTheme();
-
-  const linkColor = theme.palette.mode === "dark" ? "#64B5F6" : "#4CAF50"; // bleu clair ou vert selon le mode
+  const linkColor = theme.palette.mode === "dark" ? "#64B5F6" : "#4CAF50";
 
   return (
     <Box sx={{ p: { xs: 2, sm: 4 }, maxWidth: 900, mx: "auto" }}>
@@ -16,74 +15,179 @@ export default function PrivacyPolicy() {
         Privacy Policy
       </Typography>
 
-      <Typography component="p">
-        At Checkmate Tracker, we value your privacy. This policy outlines how we
-        collect, use, and protect your data.
+      <Typography gutterBottom>Last updated: April 20, 2025</Typography>
+
+      <Typography paragraph>
+        This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
       </Typography>
 
-      <Typography variant="h6" gutterBottom>
-        Personal Data Collection
-      </Typography>
-      <Typography component="p">
-        We do not collect personally identifiable information unless you
-        explicitly contact us. Non-personal data such as device type, browser
-        version, and approximate location may be collected to improve site
-        performance.
-      </Typography>
-
-      <Typography variant="h6" gutterBottom>
-        Cookies and Tracking Technologies
-      </Typography>
-      <Typography component="p">
-        We use cookies to enhance your experience and provide relevant content.
-        These cookies may track usage statistics or display personalized ads.
-        You can disable cookies in your browser settings at any time.
-      </Typography>
-
-      <Typography variant="h6" gutterBottom>
-        Google AdSense
-      </Typography>
-      <Typography component="p">
-        This website uses Google AdSense, a third-party advertising service.
-        Google may use cookies and web beacons to display targeted ads based on
-        your visit. Learn more about how Google uses your data:{" "}
+      <Typography paragraph>
+        We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the help of the{" "}
         <MuiLink
-          href="https://policies.google.com/technologies/ads"
+          href="https://www.termsfeed.com/privacy-policy-generator/"
           target="_blank"
           rel="noopener noreferrer"
-          underline="hover"
           sx={{ color: linkColor }}
         >
-          https://policies.google.com/technologies/ads
+          Privacy Policy Generator
         </MuiLink>
+        .
+      </Typography>
+
+      <Typography variant="h5" gutterBottom>
+        Interpretation and Definitions
+      </Typography>
+
+      <Typography variant="h6">Interpretation</Typography>
+      <Typography paragraph>
+        The words with capitalized initial letters have meanings defined under the following conditions. These definitions apply regardless of singular or plural usage.
+      </Typography>
+
+      <Typography variant="h6">Definitions</Typography>
+      <Typography paragraph>For the purposes of this Privacy Policy:</Typography>
+
+      <ul>
+        <li>
+          <Typography><strong>Account</strong> means a unique account created for You to access our Service or parts of our Service.</Typography>
+        </li>
+        <li>
+          <Typography><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our") refers to Checkmate Tracker.</Typography>
+        </li>
+        <li>
+          <Typography><strong>Cookies</strong> are small files placed on Your device by a website, containing browsing history and other data.</Typography>
+        </li>
+        <li>
+          <Typography><strong>Country</strong> refers to: Belgium</Typography>
+        </li>
+        <li>
+          <Typography><strong>Device</strong> means any device that can access the Service such as a computer, smartphone, or tablet.</Typography>
+        </li>
+        <li>
+          <Typography><strong>Personal Data</strong> is any information that relates to an identified or identifiable individual.</Typography>
+        </li>
+        <li>
+          <Typography><strong>Service</strong> refers to the Website.</Typography>
+        </li>
+        <li>
+          <Typography>
+            <strong>Website</strong> refers to Checkmate Tracker, accessible from{" "}
+            <MuiLink
+              href="https://checkmatetracker.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{ color: linkColor }}
+            >
+              https://checkmatetracker.com
+            </MuiLink>
+          </Typography>
+        </li>
+        <li>
+          <Typography><strong>You</strong> means the individual accessing or using the Service.</Typography>
+        </li>
+      </ul>
+
+      <Typography variant="h5" gutterBottom>
+        Collecting and Using Your Personal Data
       </Typography>
 
       <Typography variant="h6" gutterBottom>
-        Data Storage
+        Types of Data Collected
       </Typography>
-      <Typography component="p">
-        Your chess games and preferences are stored locally in your browser
-        (IndexedDB). We do not host or store any personal data on external
-        servers.
+
+      <Typography variant="subtitle1"><strong>Personal Data</strong></Typography>
+      <Typography paragraph>
+        While using Our Service, We may ask You to provide certain personally identifiable information. This may include but is not limited to Usage Data.
+      </Typography>
+
+      <Typography variant="subtitle1"><strong>Usage Data</strong></Typography>
+      <Typography paragraph>
+        Usage Data is collected automatically and may include IP address, browser type, pages visited, and other diagnostic data.
+      </Typography>
+
+      <Typography variant="subtitle1"><strong>Tracking Technologies and Cookies</strong></Typography>
+      <Typography paragraph>
+        We use Cookies and similar technologies like beacons and scripts to improve and analyze Our Service. You can refuse cookies through your browser settings.
+      </Typography>
+
+      <Typography paragraph>
+        Learn more on the{" "}
+        <MuiLink
+          href="https://www.termsfeed.com/blog/cookies/#What_Are_Cookies"
+          target="_blank"
+          rel="noopener noreferrer"
+          sx={{ color: linkColor }}
+        >
+          TermsFeed Cookies article
+        </MuiLink>
+        .
       </Typography>
 
       <Typography variant="h6" gutterBottom>
-        Your Rights
+        Use of Your Personal Data
       </Typography>
-      <Typography component="p">
-        You have the right to access, modify, or delete your personal data. You
-        may also object to its processing. To exercise your rights, please
-        contact us using the email below.
+      <Typography paragraph>
+        The Company may use Personal Data to provide and maintain the Service, to manage your account, to communicate with you, and for other business purposes such as analytics and improvement.
       </Typography>
 
       <Typography variant="h6" gutterBottom>
-        Contact
+        Retention & Security of Your Personal Data
       </Typography>
-      <Typography component="p">
-        For questions or requests related to this Privacy Policy, contact us at:{" "}
-        <br />
-        <strong>checkmatetracker.contact@gmail.com</strong>
+      <Typography paragraph>
+        We retain your personal data only as long as needed for the stated purposes and comply with applicable legal obligations. We use reasonable security methods but cannot guarantee 100% security.
       </Typography>
+
+      <Typography variant="h6" gutterBottom>
+        Children's Privacy
+      </Typography>
+      <Typography paragraph>
+        We do not knowingly collect information from children under 13. If you become aware of such data, please contact us for removal.
+      </Typography>
+
+      <Typography variant="h6" gutterBottom>
+        Links to Other Websites
+      </Typography>
+      <Typography paragraph>
+        Our Service may contain links to external websites. We have no control over and are not responsible for their privacy practices.
+      </Typography>
+
+      <Typography variant="h6" gutterBottom>
+        Changes to this Privacy Policy
+      </Typography>
+      <Typography paragraph>
+        We may update this Privacy Policy. Changes are effective when posted on this page. We will notify users of significant changes.
+      </Typography>
+
+      <Typography variant="h6" gutterBottom>
+        Contact Us
+      </Typography>
+      <Typography paragraph>
+        If you have any questions, you can reach us at:
+      </Typography>
+      <ul>
+        <li>
+          <Typography>
+            Email:{" "}
+            <strong>
+              <MuiLink href="mailto:checkmatetracker.contact@gmail.com" sx={{ color: linkColor }}>
+                checkmatetracker.contact@gmail.com
+              </MuiLink>
+            </strong>
+          </Typography>
+        </li>
+        <li>
+          <Typography>
+            Contact Page:{" "}
+            <MuiLink
+              href="https://checkmatetracker.com/contact"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{ color: linkColor }}
+            >
+              https://checkmatetracker.com/contact
+            </MuiLink>
+          </Typography>
+        </li>
+      </ul>
     </Box>
   );
 }
