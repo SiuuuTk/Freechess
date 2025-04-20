@@ -17,11 +17,11 @@ export default function PrivacyPolicy() {
 
       <Typography gutterBottom>Last updated: April 20, 2025</Typography>
 
-      <Typography paragraph>
+      <Typography component="p" gutterBottom>
         This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
       </Typography>
 
-      <Typography paragraph>
+      <Typography component="p" gutterBottom>
         We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the help of the{" "}
         <MuiLink
           href="https://www.termsfeed.com/privacy-policy-generator/"
@@ -39,12 +39,12 @@ export default function PrivacyPolicy() {
       </Typography>
 
       <Typography variant="h6">Interpretation</Typography>
-      <Typography paragraph>
+      <Typography component="p" gutterBottom>
         The words with capitalized initial letters have meanings defined under the following conditions. These definitions apply regardless of singular or plural usage.
       </Typography>
 
       <Typography variant="h6">Definitions</Typography>
-      <Typography paragraph>For the purposes of this Privacy Policy:</Typography>
+      <Typography component="p" gutterBottom>For the purposes of this Privacy Policy:</Typography>
 
       <ul>
         <li>
@@ -95,21 +95,21 @@ export default function PrivacyPolicy() {
       </Typography>
 
       <Typography variant="subtitle1"><strong>Personal Data</strong></Typography>
-      <Typography paragraph>
+      <Typography component="p" gutterBottom>
         While using Our Service, We may ask You to provide certain personally identifiable information. This may include but is not limited to Usage Data.
       </Typography>
 
       <Typography variant="subtitle1"><strong>Usage Data</strong></Typography>
-      <Typography paragraph>
+      <Typography component="p" gutterBottom>
         Usage Data is collected automatically and may include IP address, browser type, pages visited, and other diagnostic data.
       </Typography>
 
       <Typography variant="subtitle1"><strong>Tracking Technologies and Cookies</strong></Typography>
-      <Typography paragraph>
+      <Typography component="p" gutterBottom>
         We use Cookies and similar technologies like beacons and scripts to improve and analyze Our Service. You can refuse cookies through your browser settings.
       </Typography>
 
-      <Typography paragraph>
+      <Typography component="p" gutterBottom>
         Learn more on the{" "}
         <MuiLink
           href="https://www.termsfeed.com/blog/cookies/#What_Are_Cookies"
@@ -125,42 +125,42 @@ export default function PrivacyPolicy() {
       <Typography variant="h6" gutterBottom>
         Use of Your Personal Data
       </Typography>
-      <Typography paragraph>
+      <Typography component="p" gutterBottom>
         The Company may use Personal Data to provide and maintain the Service, to manage your account, to communicate with you, and for other business purposes such as analytics and improvement.
       </Typography>
 
       <Typography variant="h6" gutterBottom>
         Retention & Security of Your Personal Data
       </Typography>
-      <Typography paragraph>
+      <Typography component="p" gutterBottom>
         We retain your personal data only as long as needed for the stated purposes and comply with applicable legal obligations. We use reasonable security methods but cannot guarantee 100% security.
       </Typography>
 
       <Typography variant="h6" gutterBottom>
         Children's Privacy
       </Typography>
-      <Typography paragraph>
+      <Typography component="p" gutterBottom>
         We do not knowingly collect information from children under 13. If you become aware of such data, please contact us for removal.
       </Typography>
 
       <Typography variant="h6" gutterBottom>
         Links to Other Websites
       </Typography>
-      <Typography paragraph>
+      <Typography component="p" gutterBottom>
         Our Service may contain links to external websites. We have no control over and are not responsible for their privacy practices.
       </Typography>
 
       <Typography variant="h6" gutterBottom>
         Changes to this Privacy Policy
       </Typography>
-      <Typography paragraph>
+      <Typography component="p" gutterBottom>
         We may update this Privacy Policy. Changes are effective when posted on this page. We will notify users of significant changes.
       </Typography>
 
       <Typography variant="h6" gutterBottom>
         Contact Us
       </Typography>
-      <Typography paragraph>
+      <Typography component="p" gutterBottom>
         If you have any questions, you can reach us at:
       </Typography>
       <ul>
