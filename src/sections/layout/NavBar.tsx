@@ -38,54 +38,54 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
       >
         <Toolbar
           sx={{
-            display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
             px: { xs: 1, sm: 2 },
             minHeight: { xs: 56, sm: 64 },
-            gap: { xs: 1, sm: 2 },
-            flexWrap: "nowrap",
           }}
         >
-          {/* Menu button */}
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            onClick={() => setDrawerOpen((val) => !val)}
-            sx={{ p: { xs: 0.5, sm: 1 } }}
-          >
-            <Icon icon="mdi:menu" />
-          </IconButton>
+          {/* Left side: menu + logo */}
+          <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              onClick={() => setDrawerOpen((val) => !val)}
+              sx={{ p: { xs: 0.5, sm: 1 } }}
+            >
+              <Icon icon="mdi:menu" />
+            </IconButton>
 
-          {/* Logo */}
-          <Box
-            sx={{
-              cursor: "pointer",
-              display: "flex",
-              alignItems: "center",
-              flexGrow: 1,
-              maxWidth: { xs: 140, sm: 200 },
-            }}
-            onClick={handleLogoClick}
-          >
-            <Image
-              src="/android-chrome-512x512.png"
-              alt="Checkmate Tracker logo"
-              width={180}
-              height={36}
-              priority
-              style={{ width: "100%", height: "auto" }}
-            />
+            <Box
+              sx={{
+                cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+                maxWidth: { xs: 170, sm: 228 },
+              }}
+              onClick={handleLogoClick}
+            >
+              <Image
+                src="/android-chrome-512x512.png"
+                alt="Checkmate Tracker logo"
+                width={228}
+                height={39}
+                priority
+                style={{
+                  width: "100%",
+                  height: "auto",
+                }}
+              />
+            </Box>
           </Box>
 
-          {/* Socials + Theme Toggle */}
+          {/* Right side: social + dark mode */}
           <Box
             sx={{
               display: "flex",
               alignItems: "center",
-              gap: { xs: 0.5, sm: 1 },
+              gap: { xs: 1, sm: 2 },
               flexShrink: 0,
             }}
           >
@@ -124,7 +124,7 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
         </Toolbar>
       </AppBar>
 
-      {/* Drawer menu */}
+      {/* Side menu */}
       <NavMenu open={drawerOpen} onClose={() => setDrawerOpen(false)} />
     </Box>
   );
