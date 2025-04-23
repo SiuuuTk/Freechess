@@ -36,7 +36,16 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
         sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
         enableColorOnDark
       >
-        <Toolbar>
+        <Toolbar
+          sx={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "space-between",
+            alignItems: "center",
+            gap: 1,
+            px: 1,
+          }}
+        >
           {/* Menu icon (left) */}
           <IconButton
             size="large"
@@ -73,11 +82,16 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
             </Box>
           </Box>
 
-          {/* Spacer */}
-          <Box sx={{ flexGrow: 1 }} />
-
-          {/* Social buttons (Twitter & Facebook) */}
-          <Box sx={{ display: "flex", alignItems: "center", gap: 1, mr: 1 }}>
+          {/* Social + DarkMode Buttons */}
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              gap: 1,
+              flexShrink: 0,
+              ml: "auto",
+            }}
+          >
             <IconButton
               color="inherit"
               onClick={() =>
@@ -98,21 +112,20 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
             >
               <Icon icon="ri:facebook-fill" />
             </IconButton>
-          </Box>
 
-          {/* Dark mode toggle */}
-          <IconButton
-            sx={{ ml: "min(0.6rem, 0.8vw)" }}
-            onClick={switchDarkMode}
-            color="inherit"
-            edge="end"
-          >
-            {darkMode ? (
-              <Icon icon="mdi:brightness-7" />
-            ) : (
-              <Icon icon="mdi:brightness-4" />
-            )}
-          </IconButton>
+            <IconButton
+              sx={{ minWidth: "40px" }}
+              onClick={switchDarkMode}
+              color="inherit"
+              edge="end"
+            >
+              {darkMode ? (
+                <Icon icon="mdi:brightness-7" />
+              ) : (
+                <Icon icon="mdi:brightness-4" />
+              )}
+            </IconButton>
+          </Box>
         </Toolbar>
       </AppBar>
 
