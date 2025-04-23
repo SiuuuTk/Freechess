@@ -30,7 +30,7 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
   };
 
   return (
-    <Box sx={{ flexGrow: 1, display: "flex" }}>
+    <Box sx={{ flexGrow: 1 }}>
       <AppBar
         position="static"
         sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
@@ -39,70 +39,68 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
         <Toolbar
           sx={{
             display: "flex",
-            flexWrap: "wrap",
             justifyContent: "space-between",
             alignItems: "center",
-            gap: 1,
-            px: 1,
+            px: { xs: 1, sm: 2 },
+            minHeight: { xs: 56, sm: 64 },
+            gap: { xs: 1, sm: 2 },
+            flexWrap: "nowrap",
           }}
         >
-          {/* Menu icon (left) */}
+          {/* Menu button */}
           <IconButton
             size="large"
             edge="start"
             color="inherit"
             aria-label="menu"
-            sx={{ mr: "min(0.5vw, 0.6rem)" }}
             onClick={() => setDrawerOpen((val) => !val)}
+            sx={{ p: { xs: 0.5, sm: 1 } }}
           >
             <Icon icon="mdi:menu" />
           </IconButton>
 
-          {/* Logo cliquable */}
-          <Box sx={{ display: "flex", alignItems: "center" }}>
-            <Box
-              sx={{
-                cursor: "pointer",
-                display: "flex",
-                transition: "transform 0.2s ease, opacity 0.2s ease",
-                "&:hover": {
-                  transform: "scale(1.05)",
-                  opacity: 0.9,
-                },
-              }}
-              onClick={handleLogoClick}
-            >
-              <Image
-                src="/android-chrome-512x512.png"
-                alt="Checkmate Tracker logo"
-                width={228}
-                height={39}
-                priority
-              />
-            </Box>
+          {/* Logo */}
+          <Box
+            sx={{
+              cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+              flexGrow: 1,
+              maxWidth: { xs: 140, sm: 200 },
+            }}
+            onClick={handleLogoClick}
+          >
+            <Image
+              src="/android-chrome-512x512.png"
+              alt="Checkmate Tracker logo"
+              width={180}
+              height={36}
+              priority
+              style={{ width: "100%", height: "auto" }}
+            />
           </Box>
 
-          {/* Social + DarkMode Buttons */}
+          {/* Socials + Theme Toggle */}
           <Box
             sx={{
               display: "flex",
               alignItems: "center",
-              gap: 1,
+              gap: { xs: 0.5, sm: 1 },
               flexShrink: 0,
-              ml: "auto",
             }}
           >
             <IconButton
               color="inherit"
+              sx={{ p: { xs: 0.5, sm: 1 } }}
               onClick={() =>
                 window.open("https://x.com/CheckMTracker", "_blank")
               }
             >
-              <Icon icon="ri:twitter-x-fill" />
+              <Icon icon="ri:twitter-x-fill" fontSize={20} />
             </IconButton>
-
             <IconButton
               color="inherit"
+              sx={{ p: { xs: 0.5, sm: 1 } }}
               onClick={() =>
                 window.open(
                   "https://www.facebook.com/profile.php?id=61575655197875",
@@ -110,26 +108,23 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
                 )
               }
             >
-              <Icon icon="ri:facebook-fill" />
+              <Icon icon="ri:facebook-fill" fontSize={20} />
             </IconButton>
-
             <IconButton
-              sx={{ minWidth: "40px" }}
-              onClick={switchDarkMode}
               color="inherit"
-              edge="end"
+              sx={{ p: { xs: 0.5, sm: 1 } }}
+              onClick={switchDarkMode}
             >
-              {darkMode ? (
-                <Icon icon="mdi:brightness-7" />
-              ) : (
-                <Icon icon="mdi:brightness-4" />
-              )}
+              <Icon
+                icon={darkMode ? "mdi:brightness-7" : "mdi:brightness-4"}
+                fontSize={20}
+              />
             </IconButton>
           </Box>
         </Toolbar>
       </AppBar>
 
-      {/* Drawer (side menu) */}
+      {/* Drawer menu */}
       <NavMenu open={drawerOpen} onClose={() => setDrawerOpen(false)} />
     </Box>
   );
