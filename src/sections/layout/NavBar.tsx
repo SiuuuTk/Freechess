@@ -78,55 +78,28 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
           {/* Spacer */}
           <Box sx={{ flexGrow: 1 }} />
 
-          {/* About + Contact Links (hidden on mobile) */}
-          <Box
-            sx={{
-              display: { xs: "none", sm: "flex" },
-              alignItems: "center",
-              gap: 3,
-              mr: 2,
-            }}
-          >
-            <Link href="/about" passHref>
-              <Typography
-                variant="body1"
-                sx={{
-                  cursor: "pointer",
-                  color: "#fff",
-                  textDecoration: "underline",
-                  textDecorationColor: "#fff",
-                  "&:hover": {
-                    textDecorationColor: "#fff",
-                  },
-                  "&:visited": {
-                    color: "#fff",
-                    textDecorationColor: "#fff",
-                  },
-                }}
-              >
-                About
-              </Typography>
-            </Link>
-            <Link href="/contact" passHref>
-              <Typography
-                variant="body1"
-                sx={{
-                  cursor: "pointer",
-                  color: "#fff",
-                  textDecoration: "underline",
-                  textDecorationColor: "#fff",
-                  "&:hover": {
-                    textDecorationColor: "#fff",
-                  },
-                  "&:visited": {
-                    color: "#fff",
-                    textDecorationColor: "#fff",
-                  },
-                }}
-              >
-                Contact
-              </Typography>
-            </Link>
+          {/* Social buttons (Twitter & Facebook) */}
+          <Box sx={{ display: "flex", alignItems: "center", gap: 1, mr: 1 }}>
+            <IconButton
+              color="inherit"
+              onClick={() =>
+                window.open("https://x.com/CheckMTracker", "_blank")
+              }
+            >
+              <Icon icon="ri:twitter-x-fill" />
+            </IconButton>
+
+            <IconButton
+              color="inherit"
+              onClick={() =>
+                window.open(
+                  "https://www.facebook.com/profile.php?id=61575655197875",
+                  "_blank"
+                )
+              }
+            >
+              <Icon icon="ri:facebook-fill" />
+            </IconButton>
           </Box>
 
           {/* Dark mode toggle */}
