@@ -63,6 +63,10 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
                 display: "flex",
                 alignItems: "center",
                 maxWidth: { xs: 170, sm: 228 },
+                transition: "transform 0.2s ease-in-out",
+                "&:hover": {
+                  transform: "scale(1.05)",
+                },
               }}
               onClick={handleLogoClick}
             >
