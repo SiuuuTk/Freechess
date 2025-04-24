@@ -15,7 +15,12 @@ import {
 const MenuOptions = [
   { text: "Play", icon: "streamline:chess-pawn", href: "/play" },
   { text: "Analysis", icon: "streamline:magnifying-glass-solid", href: "/" },
-  { text: "Live Mode", icon: "mdi:video-outline", href: "https://checkmate-tracker-livemode.web.app", external: true },
+  {
+    text: "Live Mode",
+    icon: "mdi:video-outline",
+    href: "https://checkmate-tracker-livemode.web.app",
+    external: true,
+  },
   { text: "Database", icon: "streamline:database", href: "/database" },
   { text: "About", icon: "mdi:information-outline", href: "/about" },
   { text: "Contact", icon: "mdi:email-outline", href: "/contact" },
@@ -46,7 +51,11 @@ export default function NavMenu({ open, onClose }: Props) {
               {external ? (
                 <a
                   href={href}
-                  style={{ textDecoration: "none", color: "inherit", width: "100%" }}
+                  style={{
+                    textDecoration: "none",
+                    color: "inherit",
+                    width: "100%",
+                  }}
                   onClick={onClose}
                 >
                   <ListItemButton>
