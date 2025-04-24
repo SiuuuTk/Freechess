@@ -15,6 +15,7 @@ import {
 const MenuOptions = [
   { text: "Play", icon: "streamline:chess-pawn", href: "/play" },
   { text: "Analysis", icon: "streamline:magnifying-glass-solid", href: "/" },
+  { text: "Live Mode", icon: "mdi:video-outline", href: "https://checkmate-tracker-livemode.web.app", external: true },
   { text: "Database", icon: "streamline:database", href: "/database" },
   { text: "About", icon: "mdi:information-outline", href: "/about" },
   { text: "Contact", icon: "mdi:email-outline", href: "/contact" },
@@ -40,16 +41,31 @@ export default function NavMenu({ open, onClose }: Props) {
       >
         {/* Main nav links */}
         <List>
-          {MenuOptions.map(({ text, icon, href }) => (
+          {MenuOptions.map(({ text, icon, href, external }) => (
             <ListItem key={text} disablePadding sx={{ margin: 0.7 }}>
-              <NavLink href={href}>
-                <ListItemButton onClick={onClose}>
-                  <ListItemIcon sx={{ pl: 1 }}>
-                    <Icon icon={icon} height="1.5em" />
-                  </ListItemIcon>
-                  <ListItemText primary={text} />
-                </ListItemButton>
-              </NavLink>
+              {external ? (
+                <a
+                  href={href}
+                  style={{ textDecoration: "none", color: "inherit", width: "100%" }}
+                  onClick={onClose}
+                >
+                  <ListItemButton>
+                    <ListItemIcon sx={{ pl: 1 }}>
+                      <Icon icon={icon} height="1.5em" />
+                    </ListItemIcon>
+                    <ListItemText primary={text} />
+                  </ListItemButton>
+                </a>
+              ) : (
+                <NavLink href={href}>
+                  <ListItemButton onClick={onClose}>
+                    <ListItemIcon sx={{ pl: 1 }}>
+                      <Icon icon={icon} height="1.5em" />
+                    </ListItemIcon>
+                    <ListItemText primary={text} />
+                  </ListItemButton>
+                </NavLink>
+              )}
             </ListItem>
           ))}
         </List>
