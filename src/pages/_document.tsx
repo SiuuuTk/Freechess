@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        {/* ✅ Safe & Global Meta */}
+        {/* ✅ Meta techniques uniquement (PAS de SEO ici) */}
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width" />
         <meta
@@ -19,7 +19,7 @@ export default function Document() {
           crossOrigin="anonymous"
         ></script>
 
-        {/* ✅ Icons */}
+        {/* ✅ Favicon & Icons */}
         <link
           rel="apple-touch-icon"
           sizes="270x180"
