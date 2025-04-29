@@ -21,23 +21,38 @@ export default function Play() {
         />
 
         {/* Open Graph */}
-        <meta property="og:title" content="Play Chess vs Stockfish | Checkmate Tracker" />
+        <meta
+          property="og:title"
+          content="Play Chess vs Stockfish | Checkmate Tracker"
+        />
         <meta
           property="og:description"
           content="Play chess against Stockfish directly in your browser. No registration needed, customizable settings, and instant game analysis."
         />
-        <meta property="og:url" content="https://www.checkmatetracker.com/play" />
+        <meta
+          property="og:url"
+          content="https://www.checkmatetracker.com/play"
+        />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.checkmatetracker.com/android-chrome-512x512.png" />
+        <meta
+          property="og:image"
+          content="https://www.checkmatetracker.com/android-chrome-512x512.png"
+        />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Play Chess vs Stockfish | Checkmate Tracker" />
+        <meta
+          name="twitter:title"
+          content="Play Chess vs Stockfish | Checkmate Tracker"
+        />
         <meta
           name="twitter:description"
           content="Play chess against Stockfish directly in your browser. No registration needed, customizable settings, and instant game analysis."
         />
-        <meta name="twitter:image" content="https://www.checkmatetracker.com/android-chrome-512x512.png" />
+        <meta
+          name="twitter:image"
+          content="https://www.checkmatetracker.com/android-chrome-512x512.png"
+        />
       </Head>
 
       <Grid container gap={4} justifyContent="space-evenly" alignItems="start">

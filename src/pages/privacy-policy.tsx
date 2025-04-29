@@ -18,23 +18,38 @@ export default function PrivacyPolicy() {
         />
 
         {/* Open Graph */}
-        <meta property="og:title" content="Privacy Policy | Checkmate Tracker" />
+        <meta
+          property="og:title"
+          content="Privacy Policy | Checkmate Tracker"
+        />
         <meta
           property="og:description"
           content="Review how Checkmate Tracker collects, uses, and protects your personal data. Learn about your privacy rights and data security."
         />
-        <meta property="og:url" content="https://www.checkmatetracker.com/privacy-policy" />
+        <meta
+          property="og:url"
+          content="https://www.checkmatetracker.com/privacy-policy"
+        />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.checkmatetracker.com/android-chrome-512x512.png" />
+        <meta
+          property="og:image"
+          content="https://www.checkmatetracker.com/android-chrome-512x512.png"
+        />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Privacy Policy | Checkmate Tracker" />
+        <meta
+          name="twitter:title"
+          content="Privacy Policy | Checkmate Tracker"
+        />
         <meta
           name="twitter:description"
           content="Review how Checkmate Tracker collects, uses, and protects your personal data. Learn about your privacy rights and data security."
         />
-        <meta name="twitter:image" content="https://www.checkmatetracker.com/android-chrome-512x512.png" />
+        <meta
+          name="twitter:image"
+          content="https://www.checkmatetracker.com/android-chrome-512x512.png"
+        />
       </Head>
 
       <Box sx={{ p: { xs: 2, sm: 4 }, maxWidth: 900, mx: "auto" }}>
@@ -49,8 +64,8 @@ export default function PrivacyPolicy() {
         <Typography component="p" gutterBottom>
           This Privacy Policy describes Our policies and procedures on the
           collection, use and disclosure of Your information when You use the
-          Service and tells You about Your privacy rights and how the law protects
-          You.
+          Service and tells You about Your privacy rights and how the law
+          protects You.
         </Typography>
 
         <Typography component="p" gutterBottom>
@@ -76,8 +91,8 @@ export default function PrivacyPolicy() {
         <Typography variant="h6">Interpretation</Typography>
         <Typography component="p" gutterBottom>
           The words with capitalized initial letters have meanings defined under
-          the following conditions. These definitions apply regardless of singular
-          or plural usage.
+          the following conditions. These definitions apply regardless of
+          singular or plural usage.
         </Typography>
 
         <Typography variant="h6">Definitions</Typography>
@@ -99,8 +114,8 @@ export default function PrivacyPolicy() {
           </li>
           <li>
             <Typography>
-              <strong>Cookies</strong> are small files placed on Your device by a
-              website, containing browsing history and other data.
+              <strong>Cookies</strong> are small files placed on Your device by
+              a website, containing browsing history and other data.
             </Typography>
           </li>
           <li>
@@ -110,14 +125,14 @@ export default function PrivacyPolicy() {
           </li>
           <li>
             <Typography>
-              <strong>Device</strong> means any device that can access the Service
-              such as a computer, smartphone, or tablet.
+              <strong>Device</strong> means any device that can access the
+              Service such as a computer, smartphone, or tablet.
             </Typography>
           </li>
           <li>
             <Typography>
-              <strong>Personal Data</strong> is any information that relates to an
-              identified or identifiable individual.
+              <strong>Personal Data</strong> is any information that relates to
+              an identified or identifiable individual.
             </Typography>
           </li>
           <li>
@@ -199,8 +214,8 @@ export default function PrivacyPolicy() {
         </Typography>
         <Typography component="p" gutterBottom>
           The Company may use Personal Data to provide and maintain the Service,
-          to manage your account, to communicate with you, and for other business
-          purposes such as analytics and improvement.
+          to manage your account, to communicate with you, and for other
+          business purposes such as analytics and improvement.
         </Typography>
 
         <Typography variant="h6" gutterBottom>
@@ -208,8 +223,8 @@ export default function PrivacyPolicy() {
         </Typography>
         <Typography component="p" gutterBottom>
           We retain your personal data only as long as needed for the stated
-          purposes and comply with applicable legal obligations. We use reasonable
-          security methods but cannot guarantee 100% security.
+          purposes and comply with applicable legal obligations. We use
+          reasonable security methods but cannot guarantee 100% security.
         </Typography>
 
         <Typography variant="h6" gutterBottom>
@@ -232,8 +247,8 @@ export default function PrivacyPolicy() {
           Changes to this Privacy Policy
         </Typography>
         <Typography component="p" gutterBottom>
-          We may update this Privacy Policy. Changes are effective when posted on
-          this page. We will notify users of significant changes.
+          We may update this Privacy Policy. Changes are effective when posted
+          on this page. We will notify users of significant changes.
         </Typography>
 
         <Typography variant="h6" gutterBottom>

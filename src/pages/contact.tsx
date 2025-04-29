@@ -16,23 +16,38 @@ export default function ContactPage() {
         />
 
         {/* Open Graph */}
-        <meta property="og:title" content="Contact Us | Checkmate Tracker Support" />
+        <meta
+          property="og:title"
+          content="Contact Us | Checkmate Tracker Support"
+        />
         <meta
           property="og:description"
           content="Need help or want to share feedback? Contact the Checkmate Tracker team via email. We're here to assist you with anything related to your chess analysis experience."
         />
-        <meta property="og:url" content="https://www.checkmatetracker.com/contact" />
+        <meta
+          property="og:url"
+          content="https://www.checkmatetracker.com/contact"
+        />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.checkmatetracker.com/android-chrome-512x512.png" />
+        <meta
+          property="og:image"
+          content="https://www.checkmatetracker.com/android-chrome-512x512.png"
+        />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Contact Us | Checkmate Tracker Support" />
+        <meta
+          name="twitter:title"
+          content="Contact Us | Checkmate Tracker Support"
+        />
         <meta
           name="twitter:description"
           content="Need help or want to share feedback? Contact the Checkmate Tracker team via email. We're here to assist you with anything related to your chess analysis experience."
         />
-        <meta name="twitter:image" content="https://www.checkmatetracker.com/android-chrome-512x512.png" />
+        <meta
+          name="twitter:image"
+          content="https://www.checkmatetracker.com/android-chrome-512x512.png"
+        />
       </Head>
 
       <Box sx={{ p: { xs: 2, sm: 4 }, maxWidth: 900, mx: "auto" }}>

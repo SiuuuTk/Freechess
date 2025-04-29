@@ -178,21 +178,39 @@ export default function GameDatabase() {
           property="og:description"
           content="Browse and manage your saved chess games in Checkmate Tracker's personal game database. Load, analyze, copy, or delete PGNs with ease."
         />
-        <meta property="og:url" content="https://www.checkmatetracker.com/database" />
+        <meta
+          property="og:url"
+          content="https://www.checkmatetracker.com/database"
+        />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.checkmatetracker.com/android-chrome-512x512.png" />
+        <meta
+          property="og:image"
+          content="https://www.checkmatetracker.com/android-chrome-512x512.png"
+        />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Game Database | Checkmate Tracker" />
+        <meta
+          name="twitter:title"
+          content="Game Database | Checkmate Tracker"
+        />
         <meta
           name="twitter:description"
           content="Browse and manage your saved chess games in Checkmate Tracker's personal game database. Load, analyze, copy, or delete PGNs with ease."
         />
-        <meta name="twitter:image" content="https://www.checkmatetracker.com/android-chrome-512x512.png" />
+        <meta
+          name="twitter:image"
+          content="https://www.checkmatetracker.com/android-chrome-512x512.png"
+        />
       </Head>
 
-      <Grid container justifyContent="center" alignItems="center" gap={4} marginTop={6}>
+      <Grid
+        container
+        justifyContent="center"
+        alignItems="center"
+        gap={4}
+        marginTop={6}
+      >
         <PageTitle title="Checkmate Tracker Game Database" />
 
         <Grid container justifyContent="center" alignItems="center" size={12}>
