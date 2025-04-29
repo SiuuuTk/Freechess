@@ -8,6 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint && tsc --noEmit",
+    "export": "next export",
+    "refresh": "rm -rf out && npm run build && npm run export",
     "deploy": "firebase deploy --project=checkmatetracker--only hosting"
   },
   "dependencies": {
