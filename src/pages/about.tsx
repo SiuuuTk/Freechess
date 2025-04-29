@@ -5,42 +5,50 @@ export default function AboutPage() {
   return (
     <>
       <Head>
-        <title>About Checkmate Tracker | Improve Your Chess</title>
+        <title key="title">About Checkmate Tracker | Improve Your Chess</title>
         <meta
+          key="description"
           name="description"
           content="Discover the mission behind Checkmate Tracker, a free platform to analyze, store, and enhance your chess games."
         />
 
         {/* Open Graph */}
         <meta
+          key="og:title"
           property="og:title"
           content="About Checkmate Tracker | Improve Your Chess"
         />
         <meta
+          key="og:description"
           property="og:description"
           content="Discover the mission behind Checkmate Tracker, a free platform to analyze, store, and enhance your chess games."
         />
         <meta
+          key="og:url"
           property="og:url"
           content="https://www.checkmatetracker.com/about"
         />
-        <meta property="og:type" content="website" />
+        <meta key="og:type" property="og:type" content="website" />
         <meta
+          key="og:image"
           property="og:image"
           content="https://www.checkmatetracker.com/android-chrome-512x512.png"
         />
 
         {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta key="twitter:card" name="twitter:card" content="summary_large_image" />
         <meta
+          key="twitter:title"
           name="twitter:title"
           content="About Checkmate Tracker | Improve Your Chess"
         />
         <meta
+          key="twitter:description"
           name="twitter:description"
           content="Discover the mission behind Checkmate Tracker, a free platform to analyze, store, and enhance your chess games."
         />
         <meta
+          key="twitter:image"
           name="twitter:image"
           content="https://www.checkmatetracker.com/android-chrome-512x512.png"
         />
