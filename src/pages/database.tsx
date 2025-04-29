@@ -14,6 +14,7 @@ import LoadGameButton from "@/sections/loadGame/loadGameButton";
 import { useGameDatabase } from "@/hooks/useGameDatabase";
 import { useRouter } from "next/router";
 import { PageTitle } from "@/components/pageTitle";
+import Head from "next/head";
 
 const gridLocaleText: GridLocaleText = {
   ...GRID_DEFAULT_LOCALE_TEXT,
@@ -23,8 +24,6 @@ const gridLocaleText: GridLocaleText = {
 export default function GameDatabase() {
   const { games, deleteGame } = useGameDatabase(true);
   const router = useRouter();
-
-  console.log(games);
 
   const handleDeleteGameRow = useCallback(
     (id: GridRowId) => async () => {
@@ -110,21 +109,19 @@ export default function GameDatabase() {
         headerName: "Analyze",
         width: 100,
         cellClassName: "actions",
-        getActions: ({ id }) => {
-          return [
-            <GridActionsCellItem
-              icon={
-                <Icon icon="streamline:magnifying-glass-solid" width="20px" />
-              }
-              label="Open Evaluation"
-              onClick={() =>
-                router.push({ pathname: "/", query: { gameId: id } })
-              }
-              color="inherit"
-              key={`${id}-open-eval-button`}
-            />,
-          ];
-        },
+        getActions: ({ id }) => [
+          <GridActionsCellItem
+            icon={
+              <Icon icon="streamline:magnifying-glass-solid" width="20px" />
+            }
+            label="Open Evaluation"
+            onClick={() =>
+              router.push({ pathname: "/", query: { gameId: id } })
+            }
+            color="inherit"
+            key={`${id}-open-eval-button`}
+          />,
+        ],
       },
       {
         field: "delete",
@@ -132,19 +129,17 @@ export default function GameDatabase() {
         headerName: "Delete",
         width: 100,
         cellClassName: "actions",
-        getActions: ({ id }) => {
-          return [
-            <GridActionsCellItem
-              icon={
-                <Icon icon="mdi:delete-outline" color={red[400]} width="20px" />
-              }
-              label="Delete"
-              onClick={handleDeleteGameRow(id)}
-              color="inherit"
-              key={`${id}-delete-button`}
-            />,
-          ];
-        },
+        getActions: ({ id }) => [
+          <GridActionsCellItem
+            icon={
+              <Icon icon="mdi:delete-outline" color={red[400]} width="20px" />
+            }
+            label="Delete"
+            onClick={handleDeleteGameRow(id)}
+            color="inherit"
+            key={`${id}-delete-button`}
+          />,
+        ],
       },
       {
         field: "copy pgn",
@@ -152,65 +147,86 @@ export default function GameDatabase() {
         headerName: "Copy pgn",
         width: 100,
         cellClassName: "actions",
-        getActions: ({ id }) => {
-          return [
-            <GridActionsCellItem
-              icon={
-                <Icon icon="ri:clipboard-line" color={blue[400]} width="20px" />
-              }
-              label="Copy pgn"
-              onClick={handleCopyGameRow(id)}
-              color="inherit"
-              key={`${id}-copy-button`}
-            />,
-          ];
-        },
+        getActions: ({ id }) => [
+          <GridActionsCellItem
+            icon={
+              <Icon icon="ri:clipboard-line" color={blue[400]} width="20px" />
+            }
+            label="Copy pgn"
+            onClick={handleCopyGameRow(id)}
+            color="inherit"
+            key={`${id}-copy-button`}
+          />,
+        ],
       },
     ],
     [handleDeleteGameRow, handleCopyGameRow, router]
   );
 
   return (
-    <Grid
-      container
-      justifyContent="center"
-      alignItems="center"
-      gap={4}
-      marginTop={6}
-    >
-      <PageTitle title="Checkmate Tracker Game Database" />
-
-      <Grid container justifyContent="center" alignItems="center" size={12}>
-        <LoadGameButton />
-      </Grid>
-
-      <Grid container justifyContent="center" alignItems="center" size={12}>
-        <Typography variant="subtitle2">
-          You have {games.length} game{games.length !== 1 && "s"} in your
-          database
-        </Typography>
-      </Grid>
-
-      <Grid maxWidth="100%" minWidth="50px">
-        <DataGrid
-          aria-label="Games list"
-          rows={games}
-          columns={columns}
-          disableColumnMenu
-          hideFooter={true}
-          localeText={gridLocaleText}
-          initialState={{
-            sorting: {
-              sortModel: [
-                {
-                  field: "date",
-                  sort: "desc",
-                },
-              ],
-            },
-          }}
+    <>
+      <Head>
+        <title>Game Database | Checkmate Tracker</title>
+        <meta
+          name="description"
+          content="Browse and manage your saved chess games in Checkmate Tracker's personal game database. Load, analyze, copy, or delete PGNs with ease."
         />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Game Database | Checkmate Tracker" />
+        <meta
+          property="og:description"
+          content="Browse and manage your saved chess games in Checkmate Tracker's personal game database. Load, analyze, copy, or delete PGNs with ease."
+        />
+        <meta property="og:url" content="https://www.checkmatetracker.com/database" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.checkmatetracker.com/android-chrome-512x512.png" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Game Database | Checkmate Tracker" />
+        <meta
+          name="twitter:description"
+          content="Browse and manage your saved chess games in Checkmate Tracker's personal game database. Load, analyze, copy, or delete PGNs with ease."
+        />
+        <meta name="twitter:image" content="https://www.checkmatetracker.com/android-chrome-512x512.png" />
+      </Head>
+
+      <Grid container justifyContent="center" alignItems="center" gap={4} marginTop={6}>
+        <PageTitle title="Checkmate Tracker Game Database" />
+
+        <Grid container justifyContent="center" alignItems="center" size={12}>
+          <LoadGameButton />
+        </Grid>
+
+        <Grid container justifyContent="center" alignItems="center" size={12}>
+          <Typography variant="subtitle2">
+            You have {games.length} game{games.length !== 1 && "s"} in your
+            database
+          </Typography>
+        </Grid>
+
+        <Grid maxWidth="100%" minWidth="50px">
+          <DataGrid
+            aria-label="Games list"
+            rows={games}
+            columns={columns}
+            disableColumnMenu
+            hideFooter={true}
+            localeText={gridLocaleText}
+            initialState={{
+              sorting: {
+                sortModel: [
+                  {
+                    field: "date",
+                    sort: "desc",
+                  },
+                ],
+              },
+            }}
+          />
+        </Grid>
       </Grid>
-    </Grid>
+    </>
   );
 }

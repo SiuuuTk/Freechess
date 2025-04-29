@@ -5,12 +5,32 @@ export default function LegalNotice() {
   return (
     <>
       <Head>
-        <title>Legal Notice - Checkmate Tracker</title>
+        <title>Legal Notice & Terms | Checkmate Tracker</title>
         <meta
           name="description"
-          content="Legal Notice and Terms of Use for Checkmate Tracker."
+          content="Read the legal notice, terms of use, and hosting information for Checkmate Tracker. Learn more about site ownership and legal responsibilities."
         />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Legal Notice & Terms | Checkmate Tracker" />
+        <meta
+          property="og:description"
+          content="Read the legal notice, terms of use, and hosting information for Checkmate Tracker. Learn more about site ownership and legal responsibilities."
+        />
+        <meta property="og:url" content="https://www.checkmatetracker.com/legal" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.checkmatetracker.com/android-chrome-512x512.png" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Legal Notice & Terms | Checkmate Tracker" />
+        <meta
+          name="twitter:description"
+          content="Read the legal notice, terms of use, and hosting information for Checkmate Tracker. Learn more about site ownership and legal responsibilities."
+        />
+        <meta name="twitter:image" content="https://www.checkmatetracker.com/android-chrome-512x512.png" />
       </Head>
+
       <Container maxWidth="md" sx={{ py: 8 }}>
         <Typography variant="h4" gutterBottom>
           Legal Notice & Terms of Use
@@ -19,8 +39,7 @@ export default function LegalNotice() {
         <Box mt={4}>
           <Typography variant="h6">1. Site Identification</Typography>
           <Typography component="p">
-            <strong>Website:</strong> Checkmate Tracker
-            (https://checkmatetracker.com)
+            <strong>Website:</strong> Checkmate Tracker (https://checkmatetracker.com)
             <br />
             <strong>Owner:</strong> Checkmate Tracker Team
             <br />
