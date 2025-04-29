@@ -1,50 +1,33 @@
-import Head from "next/head";
 import { Container, Typography, Box } from "@mui/material";
+import { NextSeo } from "next-seo";
 
 export default function LegalNotice() {
   return (
     <>
-      <Head>
-        <title>Legal Notice & Terms | Checkmate Tracker</title>
-        <meta
-          name="description"
-          content="Read the legal notice, terms of use, and hosting information for Checkmate Tracker. Learn more about site ownership and legal responsibilities."
-        />
-
-        {/* Open Graph */}
-        <meta
-          property="og:title"
-          content="Legal Notice & Terms | Checkmate Tracker"
-        />
-        <meta
-          property="og:description"
-          content="Read the legal notice, terms of use, and hosting information for Checkmate Tracker. Learn more about site ownership and legal responsibilities."
-        />
-        <meta
-          property="og:url"
-          content="https://www.checkmatetracker.com/legal"
-        />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content="https://www.checkmatetracker.com/android-chrome-512x512.png"
-        />
-
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Legal Notice & Terms | Checkmate Tracker"
-        />
-        <meta
-          name="twitter:description"
-          content="Read the legal notice, terms of use, and hosting information for Checkmate Tracker. Learn more about site ownership and legal responsibilities."
-        />
-        <meta
-          name="twitter:image"
-          content="https://www.checkmatetracker.com/android-chrome-512x512.png"
-        />
-      </Head>
+      <NextSeo
+        title="Legal Notice & Terms | Checkmate Tracker"
+        description="Read the legal notice, terms of use, and hosting information for Checkmate Tracker. Learn more about site ownership and legal responsibilities."
+        canonical="https://www.checkmatetracker.com/legal"
+        openGraph={{
+          url: "https://www.checkmatetracker.com/legal",
+          title: "Legal Notice & Terms | Checkmate Tracker",
+          description:
+            "Read the legal notice, terms of use, and hosting information for Checkmate Tracker. Learn more about site ownership and legal responsibilities.",
+          images: [
+            {
+              url: "https://www.checkmatetracker.com/android-chrome-512x512.png",
+              width: 512,
+              height: 512,
+              alt: "Checkmate Tracker Logo",
+            },
+          ],
+          site_name: "Checkmate Tracker",
+        }}
+        twitter={{
+          cardType: "summary_large_image",
+          site: "@CheckmateTracker",
+        }}
+      />
 
       <Container maxWidth="md" sx={{ py: 8 }}>
         <Typography variant="h4" gutterBottom>

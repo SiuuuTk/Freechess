@@ -14,7 +14,7 @@ import LoadGameButton from "@/sections/loadGame/loadGameButton";
 import { useGameDatabase } from "@/hooks/useGameDatabase";
 import { useRouter } from "next/router";
 import { PageTitle } from "@/components/pageTitle";
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 
 const gridLocaleText: GridLocaleText = {
   ...GRID_DEFAULT_LOCALE_TEXT,
@@ -27,9 +27,7 @@ export default function GameDatabase() {
 
   const handleDeleteGameRow = useCallback(
     (id: GridRowId) => async () => {
-      if (typeof id !== "number") {
-        throw new Error("Unable to remove game");
-      }
+      if (typeof id !== "number") throw new Error("Unable to remove game");
       await deleteGame(id);
     },
     [deleteGame]
@@ -37,9 +35,7 @@ export default function GameDatabase() {
 
   const handleCopyGameRow = useCallback(
     (id: GridRowId) => async () => {
-      if (typeof id !== "number") {
-        throw new Error("Unable to copy game");
-      }
+      if (typeof id !== "number") throw new Error("Unable to copy game");
       await navigator.clipboard.writeText(games[id - 1].pgn);
     },
     [games]
@@ -47,21 +43,9 @@ export default function GameDatabase() {
 
   const columns: GridColDef[] = useMemo(
     () => [
-      {
-        field: "event",
-        headerName: "Event",
-        width: 150,
-      },
-      {
-        field: "site",
-        headerName: "Site",
-        width: 150,
-      },
-      {
-        field: "date",
-        headerName: "Date",
-        width: 150,
-      },
+      { field: "event", headerName: "Event", width: 150 },
+      { field: "site", headerName: "Site", width: 150 },
+      { field: "date", headerName: "Date", width: 150 },
       {
         field: "round",
         headerName: "Round",
@@ -108,7 +92,6 @@ export default function GameDatabase() {
         type: "actions",
         headerName: "Analyze",
         width: 100,
-        cellClassName: "actions",
         getActions: ({ id }) => [
           <GridActionsCellItem
             icon={
@@ -128,7 +111,6 @@ export default function GameDatabase() {
         type: "actions",
         headerName: "Delete",
         width: 100,
-        cellClassName: "actions",
         getActions: ({ id }) => [
           <GridActionsCellItem
             icon={
@@ -146,7 +128,6 @@ export default function GameDatabase() {
         type: "actions",
         headerName: "Copy pgn",
         width: 100,
-        cellClassName: "actions",
         getActions: ({ id }) => [
           <GridActionsCellItem
             icon={
@@ -165,44 +146,32 @@ export default function GameDatabase() {
 
   return (
     <>
-      <Head>
-        <title>Game Database | Checkmate Tracker</title>
-        <meta
-          name="description"
-          content="Browse and manage your saved chess games in Checkmate Tracker's personal game database. Load, analyze, copy, or delete PGNs with ease."
-        />
-
-        {/* Open Graph */}
-        <meta property="og:title" content="Game Database | Checkmate Tracker" />
-        <meta
-          property="og:description"
-          content="Browse and manage your saved chess games in Checkmate Tracker's personal game database. Load, analyze, copy, or delete PGNs with ease."
-        />
-        <meta
-          property="og:url"
-          content="https://www.checkmatetracker.com/database"
-        />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content="https://www.checkmatetracker.com/android-chrome-512x512.png"
-        />
-
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Game Database | Checkmate Tracker"
-        />
-        <meta
-          name="twitter:description"
-          content="Browse and manage your saved chess games in Checkmate Tracker's personal game database. Load, analyze, copy, or delete PGNs with ease."
-        />
-        <meta
-          name="twitter:image"
-          content="https://www.checkmatetracker.com/android-chrome-512x512.png"
-        />
-      </Head>
+      <NextSeo
+        title="Game Database | Checkmate Tracker"
+        description="Browse and manage your saved chess games in Checkmate Tracker's personal game database. Load, analyze, copy, or delete PGNs with ease."
+        canonical="https://www.checkmatetracker.com/database"
+        openGraph={{
+          url: "https://www.checkmatetracker.com/database",
+          title: "Game Database | Checkmate Tracker",
+          description:
+            "Browse and manage your saved chess games in Checkmate Tracker's personal game database. Load, analyze, copy, or delete PGNs with ease.",
+          type: "website",
+          images: [
+            {
+              url: "https://www.checkmatetracker.com/android-chrome-512x512.png",
+              width: 512,
+              height: 512,
+              alt: "Checkmate Tracker Logo",
+            },
+          ],
+          siteName: "Checkmate Tracker",
+        }}
+        twitter={{
+          handle: "@CheckmateTracker",
+          site: "@CheckmateTracker",
+          cardType: "summary_large_image",
+        }}
+      />
 
       <Grid
         container

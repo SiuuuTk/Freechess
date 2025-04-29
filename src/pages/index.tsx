@@ -27,6 +27,7 @@ import { Icon } from "@iconify/react";
 import EngineSettingsButton from "@/sections/engineSettings/engineSettingsButton";
 import GraphTab from "@/sections/analysis/panelBody/graphTab";
 import { PageTitle } from "@/components/pageTitle";
+import { NextSeo } from "next-seo";
 
 export default function GameReview() {
   const theme = useTheme();
@@ -61,6 +62,33 @@ export default function GameReview() {
 
   return (
     <Grid container gap={4} justifyContent="space-evenly" alignItems="start">
+      <NextSeo
+        title="Checkmate Tracker – Analyze & Improve Your Chess"
+        description="Play vs Stockfish, save and analyze your chess games. All in your browser."
+        canonical="https://www.checkmatetracker.com"
+        openGraph={{
+          url: "https://www.checkmatetracker.com",
+          title: "Checkmate Tracker – Analyze & Improve Your Chess",
+          description:
+            "Play vs Stockfish, save and analyze your chess games. All in your browser.",
+          type: "website",
+          images: [
+            {
+              url: "https://www.checkmatetracker.com/android-chrome-512x512.png",
+              width: 512,
+              height: 512,
+              alt: "Checkmate Tracker Logo",
+            },
+          ],
+          siteName: "Checkmate Tracker",
+        }}
+        twitter={{
+          handle: "@CheckmateTracker",
+          site: "@CheckmateTracker",
+          cardType: "summary_large_image",
+        }}
+      />
+
       <PageTitle title="Checkmate Tracker Game Review" />
 
       <Board />
@@ -79,29 +107,18 @@ export default function GameReview() {
           boxShadow: "0 2px 10px rgba(0, 0, 0, 0.5)",
         }}
         padding={2.5}
-        style={{
-          maxWidth: "1200px",
-        }}
+        style={{ maxWidth: "1200px" }}
         rowGap={2}
         maxHeight={{ lg: "calc(95vh - 130px)", xs: "900px" }}
         display="grid"
         gridTemplateRows="repeat(4, auto) fit-content(100%)"
         marginTop={isLgOrGreater && window.innerHeight > 780 ? 4 : 0}
-        size={{
-          xs: 12,
-          lg: "grow",
-        }}
+        size={{ xs: 12, lg: "grow" }}
       >
-        {isLgOrGreater ? (
-          <PanelHeader key="analysis-panel-header" />
-        ) : (
-          <PanelToolBar key="review-panel-toolbar" />
-        )}
+        {isLgOrGreater ? <PanelHeader /> : <PanelToolBar />}
 
         {!isLgOrGreater && !gameEval && <Divider sx={{ marginX: "5%" }} />}
-        {!isLgOrGreater && !gameEval && (
-          <PanelHeader key="analysis-panel-header" />
-        )}
+        {!isLgOrGreater && !gameEval && <PanelHeader />}
 
         <Box
           sx={{
@@ -113,34 +130,19 @@ export default function GameReview() {
           <Tabs
             value={tab}
             onChange={(_, newValue) => setTab(newValue)}
-            aria-label="basic tabs example"
+            aria-label="analysis tabs"
             variant="fullWidth"
           >
             <Tab
               label="Analysis"
-              id="tab0"
-              icon={
-                <Icon
-                  icon="mdi:magnify"
-                  color="#27f019"
-                  height={isMobile ? 15 : 20}
-                />
-              }
+              icon={<Icon icon="mdi:magnify" color="#27f019" height={isMobile ? 15 : 20} />}
               iconPosition="start"
               sx={{ textTransform: "none", minHeight: 20, paddingX: 0 }}
               disableFocusRipple
             />
-
             <Tab
               label="Moves"
-              id="tab1"
-              icon={
-                <Icon
-                  icon="mdi:format-list-bulleted"
-                  color="#27f019"
-                  height={isMobile ? 15 : 20}
-                />
-              }
+              icon={<Icon icon="mdi:format-list-bulleted" color="#27f019" height={isMobile ? 15 : 20} />}
               iconPosition="start"
               sx={{
                 textTransform: "none",
@@ -150,17 +152,9 @@ export default function GameReview() {
               }}
               disableFocusRipple
             />
-
             <Tab
               label="Graph"
-              id="tab2"
-              icon={
-                <Icon
-                  icon="mdi:chart-line"
-                  color="#27f019"
-                  height={isMobile ? 15 : 20}
-                />
-              }
+              icon={<Icon icon="mdi:chart-line" color="#27f019" height={isMobile ? 15 : 20} />}
               iconPosition="start"
               sx={{
                 textTransform: "none",
@@ -173,23 +167,14 @@ export default function GameReview() {
           </Tabs>
         </Box>
 
-        <AnalysisTab role="tabpanel" hidden={tab !== 0} id="tabContent0" />
-
-        <ClassificationTab
-          role="tabpanel"
-          hidden={tab !== 1}
-          id="tabContent1"
-        />
-
-        <GraphTab role="tabpanel" hidden={tab !== 2} id="tabContent2" />
+        <AnalysisTab role="tabpanel" hidden={tab !== 0} />
+        <ClassificationTab role="tabpanel" hidden={tab !== 1} />
+        <GraphTab role="tabpanel" hidden={tab !== 2} />
 
         {isLgOrGreater && <Divider sx={{ marginX: "5%" }} />}
-        {isLgOrGreater && <PanelToolBar key="review-panel-toolbar" />}
-
+        {isLgOrGreater && <PanelToolBar />}
         {!isLgOrGreater && gameEval && <Divider sx={{ marginX: "5%" }} />}
-        {!isLgOrGreater && gameEval && (
-          <PanelHeader key="analysis-panel-header" />
-        )}
+        {!isLgOrGreater && gameEval && <PanelHeader />}
       </Grid>
 
       <EngineSettingsButton />

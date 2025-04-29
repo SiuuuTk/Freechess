@@ -1,6 +1,5 @@
-// src/pages/contact.tsx
 import { Box, Typography, Link as MuiLink, useTheme } from "@mui/material";
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 
 export default function ContactPage() {
   const theme = useTheme();
@@ -8,47 +7,32 @@ export default function ContactPage() {
 
   return (
     <>
-      <Head>
-        <title>Contact Us | Checkmate Tracker Support</title>
-        <meta
-          name="description"
-          content="Need help or want to share feedback? Contact the Checkmate Tracker team via email. We're here to assist you with anything related to your chess analysis experience."
-        />
-
-        {/* Open Graph */}
-        <meta
-          property="og:title"
-          content="Contact Us | Checkmate Tracker Support"
-        />
-        <meta
-          property="og:description"
-          content="Need help or want to share feedback? Contact the Checkmate Tracker team via email. We're here to assist you with anything related to your chess analysis experience."
-        />
-        <meta
-          property="og:url"
-          content="https://www.checkmatetracker.com/contact"
-        />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content="https://www.checkmatetracker.com/android-chrome-512x512.png"
-        />
-
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Contact Us | Checkmate Tracker Support"
-        />
-        <meta
-          name="twitter:description"
-          content="Need help or want to share feedback? Contact the Checkmate Tracker team via email. We're here to assist you with anything related to your chess analysis experience."
-        />
-        <meta
-          name="twitter:image"
-          content="https://www.checkmatetracker.com/android-chrome-512x512.png"
-        />
-      </Head>
+      <NextSeo
+        title="Contact Us | Checkmate Tracker Support"
+        description="Need help or want to share feedback? Contact the Checkmate Tracker team via email. We're here to assist you with anything related to your chess analysis experience."
+        canonical="https://www.checkmatetracker.com/contact"
+        openGraph={{
+          url: "https://www.checkmatetracker.com/contact",
+          title: "Contact Us | Checkmate Tracker Support",
+          description:
+            "Need help or want to share feedback? Contact the Checkmate Tracker team via email. We're here to assist you with anything related to your chess analysis experience.",
+          type: "website",
+          images: [
+            {
+              url: "https://www.checkmatetracker.com/android-chrome-512x512.png",
+              width: 512,
+              height: 512,
+              alt: "Checkmate Tracker Logo",
+            },
+          ],
+          siteName: "Checkmate Tracker",
+        }}
+        twitter={{
+          handle: "@CheckmateTracker",
+          site: "@CheckmateTracker",
+          cardType: "summary_large_image",
+        }}
+      />
 
       <Box sx={{ p: { xs: 2, sm: 4 }, maxWidth: 900, mx: "auto" }}>
         <Typography variant="h4" gutterBottom>
@@ -67,7 +51,7 @@ export default function ContactPage() {
           href="mailto:checkmatetracker.contact@gmail.com"
           underline="hover"
           sx={{
-            color: isDark ? "#80bfff" : "primary.main", // 💡 bleu clair en mode sombre
+            color: isDark ? "#80bfff" : "primary.main",
           }}
         >
           checkmatetracker.contact@gmail.com

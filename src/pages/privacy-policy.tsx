@@ -1,8 +1,8 @@
-// pages/privacy-policy.tsx
+// src/pages/privacy-policy.tsx
 
 import { Box, Typography, Link as MuiLink, useTheme } from "@mui/material";
 import { PageTitle } from "@/components/pageTitle";
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 
 export default function PrivacyPolicy() {
   const theme = useTheme();
@@ -10,47 +10,27 @@ export default function PrivacyPolicy() {
 
   return (
     <>
-      <Head>
-        <title>Privacy Policy | Checkmate Tracker</title>
-        <meta
-          name="description"
-          content="Review how Checkmate Tracker collects, uses, and protects your personal data. Learn about your privacy rights and data security."
-        />
-
-        {/* Open Graph */}
-        <meta
-          property="og:title"
-          content="Privacy Policy | Checkmate Tracker"
-        />
-        <meta
-          property="og:description"
-          content="Review how Checkmate Tracker collects, uses, and protects your personal data. Learn about your privacy rights and data security."
-        />
-        <meta
-          property="og:url"
-          content="https://www.checkmatetracker.com/privacy-policy"
-        />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content="https://www.checkmatetracker.com/android-chrome-512x512.png"
-        />
-
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Privacy Policy | Checkmate Tracker"
-        />
-        <meta
-          name="twitter:description"
-          content="Review how Checkmate Tracker collects, uses, and protects your personal data. Learn about your privacy rights and data security."
-        />
-        <meta
-          name="twitter:image"
-          content="https://www.checkmatetracker.com/android-chrome-512x512.png"
-        />
-      </Head>
+      <NextSeo
+        title="Privacy Policy | Checkmate Tracker"
+        description="Review how Checkmate Tracker collects, uses, and protects your personal data. Learn about your privacy rights and data security."
+        canonical="https://www.checkmatetracker.com/privacy-policy"
+        openGraph={{
+          type: "website",
+          url: "https://www.checkmatetracker.com/privacy-policy",
+          title: "Privacy Policy | Checkmate Tracker",
+          description:
+            "Review how Checkmate Tracker collects, uses, and protects your personal data. Learn about your privacy rights and data security.",
+          images: [
+            {
+              url: "https://www.checkmatetracker.com/android-chrome-512x512.png",
+              alt: "Checkmate Tracker Logo",
+            },
+          ],
+        }}
+        twitter={{
+          cardType: "summary_large_image",
+        }}
+      />
 
       <Box sx={{ p: { xs: 2, sm: 4 }, maxWidth: 900, mx: "auto" }}>
         <PageTitle title="Privacy Policy - Checkmate Tracker" />
