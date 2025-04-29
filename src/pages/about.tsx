@@ -36,7 +36,11 @@ export default function AboutPage() {
         />
 
         {/* Twitter Card */}
-        <meta key="twitter:card" name="twitter:card" content="summary_large_image" />
+        <meta
+          key="twitter:card"
+          name="twitter:card"
+          content="summary_large_image"
+        />
         <meta
           key="twitter:title"
           name="twitter:title"
