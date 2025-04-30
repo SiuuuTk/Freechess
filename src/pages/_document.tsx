@@ -1,10 +1,10 @@
-import { Head, Html, Main, NextScript } from "next/document";
+import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        {/* ✅ Meta techniques uniquement (PAS de SEO ici) */}
+        {/* ✅ Meta techniques (pas de SEO ici) */}
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width" />
         <meta
